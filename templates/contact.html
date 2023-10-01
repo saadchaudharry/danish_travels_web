@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+    <div class="container py-5">
+        <h1 class="display-3 text-white  slideInRight">Contact</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb  slideInRight mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 justify-content-center mb-5">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <div class="bg-primary text-center h-100 p-5">
+                    <div class="btn-square  rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-phone-alt fa-2x text-white"></i>
+                    </div>
+                    <h4 class="mb-3 text-white">Phone Number</h4>
+                    <p class="mb-2 text-white">+91 8976372088</p>
+                    <p class="mb-4 text-white">+91 8898165945</p>
+                    <a class="btn btn-primary px-4" href="tel:+918976372088">Call Now <i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="bg-primary text-center h-100 p-5">
+                    <div class="btn-square rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-envelope-open fa-2x text-white"></i>
+                    </div>
+                    <h4 class="mb-3 text-white">Email Address</h4>
+                    <p class="mb-2 text-white">khalid@hr-asc.in</p>
+                    <p class="mb-2 text-white">Recruithr@hr-asc.in</p>
+                    <p class="mb-2 text-white">Admin@hr-asc.in</p>
+                    <a class="btn btn-primary px-4" href="mailto:khalid@hr-asc.in">Email Now <i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                <div class="bg-primary text-center h-100 p-5">
+                    <div class="btn-square  rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-map-marker-alt fa-2x text-white"></i>
+                    </div>
+                    <h4 class="mb-3 text-white">Office Address</h4>
+                    <p class="mb-2 text-white">Shop no 2 Chirag Heights, Khardi Gaon Road, Opp Bharat Gears Ltd. Mumbra, Thane-400612</p>
+                    {% comment %} <p class="mb-4 text-white">+012 345 67890</p> {% endcomment %}
+                    <a class="btn btn-primary px-4" href="https://maps.app.goo.gl/uBMJyPvZpsqH3KtBA" target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mb-5">
+            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                <iframe  class="w-100"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.8462580524565!2d73.02798080404354!3d19.158205912804046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfad581e76f9%3A0x5b591b3aa99344df!2sGalaxy%20Manpower%20Head%20Office!5e0!3m2!1sen!2sin!4v1696168526875!5m2!1sen!2sin" frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Contact Us</p>
+                <h1 class="display-5 mb-4">If You Have Any Queries, Please Feel Free To Contact Us</h1>
+                {% comment %} <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax &amp; PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> {% endcomment %}
+                <div class="row g-4">
+                    <div class="col-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6>Call Us</h6>
+                                <span>+91 8976372088</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
+                                <i class="fa fa-envelope text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6>Mail Us</h6>
+                                <span>khalid@hr-asc.in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                <form method="post" class="fgrn">{% csrf_token %}
+                    {{ form|crispy }}
+                    <br>
+                  <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

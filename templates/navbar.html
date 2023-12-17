@@ -1,65 +1,89 @@
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+<header id="site-header" class="fixed-top">
+    <div class="container">
+       <nav class="navbar navbar-expand-lg navbar-dark stroke">
+          <h1><a class="navbar-brand" href="{% url  'index'%}">
+                <span class="sub-log">Danish</span>Travels
+            </a>
+          </h1>
+          
+
+
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+             aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+             <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+             </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+             <ul class="navbar-nav mx-lg-auto">
+                <li class="nav-item active">
+                   <a class="nav-link" href="{% url  'index'%}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      About
+                   </a>
+                   <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url  'about'%}#Vision">Vision</a></li>
+                      <li><a class="dropdown-item" href="{% url  'about'%}#Mission">Mission</a></li>
+                      <li><a class="dropdown-item" href="{% url  'about'%}#Team">Team</a></li>
+                      <li><a class="dropdown-item" href="{% url  'about'%}#testimonials">Testimonials</a></li>
+                      <li><a class="dropdown-item" href="{% url  'service'%}#Sector">Sector</a></li>
+
+                   </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Services
+                   </a>
+                   <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url  'service'%}#Mission">Mission</a></li>
+                      <li><a class="dropdown-item" href="{% url  'service'%}#Services">Services</a></li>
+                      <li><a class="dropdown-item" href="{% url  'service'%}#Sector">Sector</a></li>
+                   </ul>
+                </li>
+
+
+
+                <li class="nav-item">
+                   <a class="nav-link" href="{% url  'client'%}">Clients</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="{% url  'licenses'%}">licenses</a>
+                </li>
+
+                <li class="nav-item">
+                   <a class="nav-link" href="{% url  'cont'%}">Contact</a>
+                </li>
+
+                <li class="top-quote ml-lg-4 mt-lg-0 mt-3">
+                   <a href="{% url  'cont'%}" class="btn btn-style btn-primary">Get a Quote</a>
+                </li>
+
+
+
+             </ul>
+          </div>
+          <!-- toggle switch for light and dark theme -->
+          <div class="mobile-position">
+             <nav class="navigation">
+                <div class="theme-switch-wrapper">
+                   <label class="theme-switch" for="checkbox">
+                      <input type="checkbox" id="checkbox">
+                      <div class="mode-container py-1">
+                         <i class="gg-sun"></i>
+                         <i class="gg-moon"></i>
+                      </div>
+                   </label>
+                </div>
+             </nav>
+          </div>
+          <!-- //toggle switch for light and dark theme -->
+       </nav>
     </div>
-    <!-- Spinner End -->
-
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-0">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-white">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
-                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span class="fs-5 fw-bold">+91 8976372088</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-        <a href="{% url "index" %}" class="navbar-brand ps-5 me-0">
-            <h1 class="text-white m-0">ASC</h1>
-        </a>
-        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{% url "index" %}" class="nav-item nav-link active">Home</a>
-                <a href="{% url "about" %}" class="nav-item nav-link">About</a>
-                <a href="{% url "service" %}" class="nav-item nav-link">Services</a>
-                <a href="{% url "client" %}" class="nav-item nav-link">Clientele</a>
-                <a href="{% url "cont" %}" class="nav-item nav-link">Contact</a>
-            </div>
-            {% comment %} <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a> {% endcomment %}
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-
-             {% comment %} <div class="nav-item dropdown"> 
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="project.html" class="dropdown-item">Projects</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                           
-                    </div>
-                </div>
-                    {% endcomment %}
+ </header>

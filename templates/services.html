@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="inner-banner"></div>
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <ul class="breadcrumbs-custom-path">
+        <li>
+          <a href="#url">Home</a>
+        </li>
+        <li class="active">
+          <span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Services
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- /services -->
+
+  <div class="py-5 w3l-cwp4-sec text-dark" id="Mission">
+    <div class="container">
+      <div class="row flex-center">
+        <div class="col-12 mb-2 mb-lg-5 text-center">
+          <h6 class="sub-titlehny mb-2">Our Mission</h6>
+          <h3 class="hny-title">To be the Premier International Recruitment Partner.</h3>
+        </div>
+      </div>
+      <div class="row flex-center">
+        <div class="col-sm-8 col-lg-4 mt-5 mt-lg-0 pe-lg-3 pe-xl-4">
+          <div class="row bottom_grids pt-md-3 text-left">
+            <div class="col-12">
+              <div class="grid-block rounded" style="padding: 0px 0px">
+                <a href="#" class="d-block p-lg-4 p-1">
+                  <span class="fa fa-cubes" aria-hidden="true"></span>
+                  <h4 class="my-3">OUR INFRASTRUCTURE</h4>
+                  <p class="">Robust Technological Hub for Efficient Operations.</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="grid-block rounded" style="padding: 0px 0px">
+                <a href="#" class="d-block p-lg-4 p-1">
+                  <span class="fa fa-building-o" aria-hidden="true"></span>
+                  <h4 class="my-3">POWERHOUSE MANNED WITH SKILLED PERSONNEL</h4>
+                  <p class="">Excel Through Strong Infrastructure and Skilled Workforce.</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="grid-block rounded" style="padding: 0px 0px">
+                <a href="#" class="d-block p-lg-4 p-1">
+                  <span class="fa fa-building-o" aria-hidden="true"></span>
+                  <h4 class="my-3">OUR UPGRADATION CENTER</h4>
+                  <p class="">Nationwide Skill Up-gradation Centers Tailored to Client Needs.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-lg-4 mt-4 mt-lg-0 px-lg-4">
+          <br /><br /><br /><br /><br /><br />
+          <img class="w-100 rounded" src="https://expertfasteners.com/media/static/images/mid2.jpg" />
+        </div>
+
+        <div class="col-sm-8 col-lg-4 mt-5 mt-lg-0 ps-lg-3 ps-xl-4">
+          <div class="row bottom_grids pt-md-3 text-left">
+            <div class="col-12">
+              <div class="grid-block rounded" style="padding: 0px 0px">
+                <a href="#" class="d-block p-lg-4 p-1">
+                  <span class="fa fa-cubes" aria-hidden="true"></span>
+                  <h4 class="my-3">OUR PROCESSING & DOCUMENT CENTER</h4>
+                  <p class="">Expert Executives Ensuring Seamless Talent Spotting and Recruitment.</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="grid-block rounded" style="padding: 0px 0px">
+                <a href="#" class="d-block p-lg-4 p-1">
+                  <span class="fa fa-building-o" aria-hidden="true"></span>
+                  <h4 class="my-3">ON THE DEPLOYMENTS</h4>
+                  <p class="">Efficient Deployment through Skilled Personnel and Robust Infrastructure</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="grid-block rounded" style="padding: 0px 0px">
+                <a href="#" class="d-block p-lg-4 p-1">
+                  <span class="fa fa-podcast" aria-hidden="true"></span>
+                  <h4 class="my-3">CLIENTS REQUIREMENTS</h4>
+                  <p class="">Dedicated Service for Over 18 Years to Meet Client Standards.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="w3l-services2" id="">
+    <div id="cwp23-block" class="py-5">
+      <div class="container py-lg-5">
+        <div class="row cwp23-content mt-lg-5 mt-4">
+          <div class="col-lg-6 cwp23-img">
+            <h6 class="sub-titlehny">Our Services</h6>
+            <h3 class="hny-title">Providing Innovative H.R Solutions Solutions</h3>
+            <p class="mt-4">At Danish Travels, we are committed to providing innovative H.R Solutions solutions that meet the highest standards. We understand the unique challenges of the industry and tailor our services to exceed expectations.</p>
+            <p class="mt-4">Explore our 24/7 availability, top-notch work facilities, no-obligation quotes, and a team of qualified engineers dedicated to excellence. We take pride in delivering H.R Solutions solutions that go beyond expectations.</p>
+            <div class="w3l-button mt-lg-5 mt-4">
+              <a href="{% url  'service'%}" class="btn btn-style btn-primary mr-2">Explore Services</a>
+            </div>
+          </div>
+          <div class="col-lg-6 cwp23-text align-self mt-lg-0 mt-5 pl-lg-5">
+            <div class="cwp23-text-cols">
+              <div class="column">
+                <span class="fa fa-clock-o" aria-hidden="true"></span>
+                <a href="{% url  'service'%}">24/7 Availability</a>
+                <p>Our services are available around the clock, ensuring timely support for your H.R Solutions needs.</p>
+              </div>
+              <div class="column">
+                <span class="fa fa-cogs" aria-hidden="true"></span>
+                <a href="{% url  'service'%}">Top-notch Work Facilities</a>
+                <p>We provide state-of-the-art facilities, leveraging modern technology for H.R Solutions excellence.</p>
+              </div>
+              <div class="column">
+                <span class="fa fa-mars" aria-hidden="true"></span>
+                <a href="{% url  'service'%}">No-Obligation Quote</a>
+                <p>Get a quote with no obligations, allowing you to make informed decisions for your projects.</p>
+              </div>
+              <div class="column">
+                <span class="fa fa-user" aria-hidden="true"></span>
+                <a href="{% url  'service'%}">Qualified Engineers</a>
+                <p>Our team consists of highly qualified engineers dedicated to delivering exceptional results.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- //services -->
+  <!-- /w3l-services3 -->
+  <section class="w3l-services3">
+    <div class="new-block">
+      <div class="container py-5">
+        <div class="middle-section py-lg-5 py-4">
+          <div class="section-width">
+            <h3 class="hny-title two">Elevating Human Capital through Expert HR Consultancy</h3>
+          </div>
+          <div class="link-list-menu">
+            <p class="mb-sm-5 mb-4">At Danish Travels, our HR consultancy is dedicated to elevating your organization's human capital. We bring expertise in HR strategy, talent acquisition, and workforce development. Our goal is to craft solutions that empower your team, enhance workplace culture, and drive success in today's dynamic business landscape.</p>
+            <a class="btn btn-style btn-white" href="{% url  'cont'%}">Consult with Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- //w3l-services3 -->
+  <!-- /grids -->
+  <section class="w3l-grids-3 py-5">
+    <div class="container py-md-5 py-3">
+      <div class="row bottom-ab-grids align-items-center">
+        <div class="col-lg-6 bottom-ab-left">
+          <h6 class="sub-titlehny">Our Distinctive Approach</h6>
+          <h3 class="hny-title">Innovative H.R Solutions Solutions for Residences and Businesses</h3>
+          <p class="my-3">Danish Travels stands out with an innovative approach to delivering excellence in residential and commercial H.R Solutions. Our commitment to quality, precision, and client satisfaction sets the foundation for every project.</p>
+        </div>
+        <div class="col-lg-6 bottom-ab-right mt-lg-0 mt-3 pl-lg-4">
+          <p>We take immense pride in our specialization recruiting staff for the GCC countries. Our Commitment to ensuring a seamless and legally compliant recruitment process sets us apart. In a andscape marked by evolving regulations, our adaptability and steadfast dedication to ethical practices have enabled us to flourish.</p>
+          <p class="mt-3">We extend our gratitude to our clients, partners, and our extraordinary team, who have been the driving force behind our success. Together, we will continue to reach new heights and achieve remarkable milestones. Thank you for choosing Danish Travels as your recruitment partner. We look forward to an exciting future filled with endless opportunities.</p>
+        </div>
+      </div>
+
+      <div class="row bottom_grids pt-md-3 text-left" id="Services">
+        {% for s in Services %}
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="grid-block">
+              <a href="#Services" class="d-block p-lg-4 p-3">
+                <img src="/media/{{ s.thumbnail }}" alt="Your Image" style="max-width: 64px; max-height: 64px;" />
+                <h4 class="my-3">{{ s.name }}</h4>
+                <p class="">{{ s.about }}</p>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!-- //grids -->
+
+  <section class="w3l-team" id="Sector">
+    <div class="team py-5">
+      <div class="container py-md-5 py-3">
+        <div class="header-section text-center mx-auto">
+          <h6 class="sub-titlehny">Industries We Serve</h6>
+          <h3 class="hny-title">Sector</h3>
+          <p class="my-3">At Danish Travels, our expertise spans across various sectors. We specialize in delivering top-notch solutions tailored to the unique needs of each industry. From residential and commercial H.R Solutions to innovative project management, we are committed to excellence.</p>
+        </div>
+
+
+          {% for i in Sector %}
+          <div class="col-lg-3 col-sm-6 team-wrap mt-sm-0 pt-sm-0 mt-4 pt-2">
+            <div class="team-info">
+              <div class="column position-relative img-circle">
+                <a href="#url"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid" /></a>
+              </div>
+              <div class="column-btm">
+                <h3 class="name-pos"><a href="#url">{{ i.name }}</a></h3>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -7,11 +7,12 @@ from django.conf import settings
 from django.core.mail import send_mail
 # Create your models here.
 
+
 class ContactUs(models.Model):
     name = models.CharField(max_length=999)
-    email= models.EmailField()
-    phone= models.CharField(max_length=999)
-    msG  = models.TextField(max_length=9999,verbose_name='message')
+    email = models.EmailField()
+    phone = models.CharField(max_length=999)
+    msG = models.TextField(max_length=9999, verbose_name='message')
 
     def __str__(self):
         return str(self.name)
@@ -21,29 +22,31 @@ class ContactUs(models.Model):
         verbose_name_plural = 'Contact Us'
 
 
-def ContactUssignal(sender,instance,*args,**kwargs):
-        subject = 'ENQUIRE FROM WEBSITE'
-        message = f'''
+def ContactUssignal(sender, instance, *args, **kwargs):
+    subject = 'ENQUIRE FROM WEBSITE'
+    message = f'''
                 Name : {instance.name}
                 Email : {instance.email}
                 Phone : {instance.phone}
                 Message :
                 {instance.msG}.
         '''
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['saadchaudhary646@gmail.com', 'khalid@hr-asc.in ',
-                          'Recruithr@hr-asc.in','Admin@hr-asc.in']
-        send_mail( subject, message, email_from, recipient_list )
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = ['saadchaudhary646@gmail.com', 'khalid@hr-asc.in ',
+                      'Recruithr@hr-asc.in', 'Admin@hr-asc.in']
+    send_mail(subject, message, email_from, recipient_list)
 
-pre_save.connect(ContactUssignal,sender=ContactUs)
+
+pre_save.connect(ContactUssignal, sender=ContactUs)
+
 
 class Service(models.Model):
     name = models.CharField(max_length=999)
     thumbnail = models.ImageField(upload_to="Service")
-    about = models.CharField(max_length=999)
+    about = models.TextField(max_length=9999)
     Enable = models.BooleanField(default=True)
-    index  = models.BooleanField()
-    position  =models.IntegerField(blank=True, null=True)
+    index = models.BooleanField()
+    position = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return str(self.name)
@@ -57,8 +60,8 @@ class Gallary(models.Model):
     name = models.CharField(max_length=999)
     thumbnail = models.ImageField(upload_to="Gallary")
     Enable = models.BooleanField(default=True)
-    index  = models.BooleanField()
-    position  =models.IntegerField(blank=True, null=True)
+    index = models.BooleanField()
+    position = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return str(self.name)
@@ -72,8 +75,8 @@ class licenses(models.Model):
     name = models.CharField(max_length=999)
     thumbnail = models.ImageField(upload_to="licenses")
     Enable = models.BooleanField(default=True)
-    index  = models.BooleanField()
-    position  =models.IntegerField(blank=True, null=True)
+    index = models.BooleanField()
+    position = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return str(self.name)
@@ -82,16 +85,17 @@ class licenses(models.Model):
         verbose_name = 'license'
         verbose_name_plural = 'licenses'
 
+
 class team(models.Model):
     name = models.CharField(max_length=999)
     designation = models.CharField(max_length=999)
-    phone = models.CharField(max_length=999,blank=True, null=True)
-    Email = models.CharField(max_length=999,blank=True, null=True)
+    phone = models.CharField(max_length=999, blank=True, null=True)
+    Email = models.CharField(max_length=999, blank=True, null=True)
 
     thumbnail = models.ImageField(upload_to="licenses")
     Enable = models.BooleanField(default=True)
-    index  = models.BooleanField()
-    position  =models.IntegerField(blank=True, null=True)
+    index = models.BooleanField()
+    position = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return str(self.name)
@@ -104,7 +108,7 @@ class team(models.Model):
 class Client(models.Model):
     name = models.CharField(max_length=999)
     thumbnail = models.ImageField(upload_to="Gallary")
-    index  = models.BooleanField()
+    index = models.BooleanField()
 
     def __str__(self):
         return str(self.name)
@@ -112,3 +116,16 @@ class Client(models.Model):
     class Meta:
         verbose_name = 'Client'
         verbose_name_plural = 'Clients'
+
+
+class Sector(models.Model):
+    name = models.CharField(max_length=999)
+    thumbnail = models.ImageField(upload_to="Sector")
+    index = models.BooleanField()
+
+    def __str__(self):
+        return str(self.name)
+
+    class Meta:
+        verbose_name = 'Sector'
+        verbose_name_plural = 'Sectors'

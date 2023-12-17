@@ -2,114 +2,84 @@
 {% load crispy_forms_tags %}
 
 {% block body %}
-
-
-<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
-    <div class="container py-5">
-        <h1 class="display-3 text-white  slideInRight">Contact</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb  slideInRight mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact</li>
-            </ol>
-        </nav>
-    </div>
+ 
+<div class="inner-banner">
 </div>
-
-
-
-
-<div class="container-xxl py-5">
+<section class="w3l-breadcrumb">
     <div class="container">
-        <div class="row g-5 justify-content-center mb-5">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <div class="bg-primary text-center h-100 p-5">
-                    <div class="btn-square  rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-phone-alt fa-2x text-white"></i>
-                    </div>
-                    <h4 class="mb-3 text-white">Phone Number</h4>
-                    <p class="mb-2 text-white">+91 8976372088</p>
-                    <p class="mb-4 text-white">+91 8898165945</p>
-                    <a class="btn btn-primary px-4" href="tel:+918976372088">Call Now <i class="fa fa-arrow-right ms-2"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                <div class="bg-primary text-center h-100 p-5">
-                    <div class="btn-square rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-envelope-open fa-2x text-white"></i>
-                    </div>
-                    <h4 class="mb-3 text-white">Email Address</h4>
-                    <p class="mb-2 text-white">khalid@hr-asc.in</p>
-                    <p class="mb-2 text-white">Recruithr@hr-asc.in</p>
-                    <p class="mb-2 text-white">Admin@hr-asc.in</p>
-                    <a class="btn btn-primary px-4" href="mailto:khalid@hr-asc.in">Email Now <i class="fa fa-arrow-right ms-2"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="bg-primary text-center h-100 p-5">
-                    <div class="btn-square  rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-map-marker-alt fa-2x text-white"></i>
-                    </div>
-                    <h4 class="mb-3 text-white">Office Address</h4>
-                    <p class="mb-2 text-white">Shop no 2 Chirag Heights, Khardi Gaon Road, Opp Bharat Gears Ltd. Mumbra, Thane-400612</p>
-                    {% comment %} <p class="mb-4 text-white">+012 345 67890</p> {% endcomment %}
-                    <a class="btn btn-primary px-4" href="https://maps.app.goo.gl/uBMJyPvZpsqH3KtBA" target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row mb-5">
-            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
-                <iframe  class="w-100"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.8462580524565!2d73.02798080404354!3d19.158205912804046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfad581e76f9%3A0x5b591b3aa99344df!2sGalaxy%20Manpower%20Head%20Office!5e0!3m2!1sen!2sin!4v1696168526875!5m2!1sen!2sin" frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </div>
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
-                <p class="fw-medium text-uppercase text-primary mb-2">Contact Us</p>
-                <h1 class="display-5 mb-4">If You Have Any Queries, Please Feel Free To Contact Us</h1>
-                {% comment %} <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax &amp; PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> {% endcomment %}
-                <div class="row g-4">
-                    <div class="col-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
-                                <i class="fa fa-phone-alt text-white"></i>
-                            </div>
-                            <div class="ms-3">
-                                <h6>Call Us</h6>
-                                <span>+91 8976372088</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
-                                <i class="fa fa-envelope text-white"></i>
-                            </div>
-                            <div class="ms-3">
-                                <h6>Mail Us</h6>
-                                <span>khalid@hr-asc.in</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <form method="post" class="fgrn">{% csrf_token %}
-                    {{ form|crispy }}
-                    <br>
-                  <button type="submit" class="btn btn-success">Submit</button>
-                </form>
-            </div>
-        </div>
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Contact Us</li>
+        </ul>
     </div>
-</div>
+</section>
+  <!--/contact-->
+<section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Contact</h6>
+        <h3 class="hny-title">Get in touch with us</h3>
+    </div>
+      <div class="form-41-mian section-gap mt-5">
+        <div class="container">
+          <div class="d-grid align-form-map">
+            <div class="form-inner-cont">
 
 
 
 
+              <form method="post" class="fgrn">{% csrf_token %}
+                {{ form|crispy }}
+                <br>
+                <button type="submit" class="btn btn-style btn-primary">Submit Message</button>
+              </form>    
 
 
 
-{% endblock %}
+
+            </div>
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d454.4901311072406!2d72.82594755548962!3d18.967772421080525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce6a8a42de73%3A0xf7ae73d6d4bfc6c5!2sOzone%20Biz%20Center%2C%20Manaji%20Rajuji%20Rd%2C%20Nagpada%2C%20Madanpura%2C%20Mumbai%2C%20Maharashtra%20400008!5e0!3m2!1sen!2sin!4v1702814334275!5m2!1sen!2sin"
+               width="400" height="220" style="border:0;" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              {% comment %} <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001161.424489281!2d-78.01909140705047!3d42.72866436845163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sin!4v1570786994395!5m2!1sen!2sin"
+                frameborder="0" allowfullscreen=""></iframe> {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contant11-top-bg mt-lg-5 mt-4">
+        <div class="container text-center">
+          <div class="d-grid contact pt-lg-4">
+            <div class="contact-info-left d-grid text-center">
+  
+              <div class="contact-info mt-4">
+                <h3>Berlin Office</h3><br>
+                <p class="mb-3"><label>Address: </label> A 1204, 12th Floor, Ozone Biz Center, Next to Maharashtra College, Bellasis Road,<br> Boman Behram Marg, Mumbai Central, Mumbai - 400 008</p>
+                <p class="mb-3"><label>Hours : </label> Mon-Fri: 8am – 7pm</p>
+              </div>
+              <div class="contact-info mt-4">
+                <h3>Phone</h3><br>
+                <p class="mb-3"><label>Phone : </label> <a href="tel:+91-22-46055118">+91-22-46055118</a></p>
+                {% comment %} <p class="mb-3"><label>Phone : </label> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></p>
+                <p class="mb-3"><label>Phone : </label> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></p> {% endcomment %}
+
+              </div>
+              <div class="contact-info mt-4">
+                <h4>Email</h4><br>
+                <p class="mb-3"><label>Email : </label> <a href="mailto:info@danishtravels.co" class="email">info@danishtravels.co</a></p>
+                {% comment %} <p class="mb-3"><label>Email : </label> <a href="mailto:DanishTravels@email.com" class="email">DanishTravels@email.com</a></p>
+                <p class="mb-3"><label>Email : </label> <a href="mailto:DanishTravels@email.com" class="email">DanishTravels@email.com</a></p> {% endcomment %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+  <!--//contact-->
+  
+
+  
+  
+  {% endblock %}

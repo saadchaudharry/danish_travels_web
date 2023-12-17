@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="inner-banner"></div>
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <ul class="breadcrumbs-custom-path">
+        <li>
+          <a href="#url">Home</a>
+        </li>
+        <li class="active">
+          <span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> licenses
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- /services -->
+
+  <section class="w3l-portfolio-8 py-5">
+    <div class="portfolio-main py-md-5 py-3">
+      <div class="container">
+        <div class="header-section text-center mx-auto">
+          <h6 class="sub-titlehny">Explore Our Licenses</h6>
+          <h3 class="hny-title">Latest Licenses</h3>
+          <p class="my-3">Discover our latest licenses and certifications, a testament to our commitment to excellence.</p>
+        </div>
+
+        <div class="row galler-top mt-lg-5 mt-4">
+          {% for i in licenses %}
+            <div class="col-md-4 protfolio-item hover14">
+              <a href="/media/{{ i.thumbnail }}" data-lightbox="example-set" class="mb-4" data-title="{{ i.name }}">
+                <figure>
+                  <img src="/media/{{ i.thumbnail }}" alt="product" class="img-fluid" />
+                </figure>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //projects -->
+{% endblock %}

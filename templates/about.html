@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="inner-banner"></div>
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <ul class="breadcrumbs-custom-path">
+        <li>
+          <a href="#url">Home</a>
+        </li>
+        <li class="active">
+          <span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> About Us
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- /about -->
+  <!-- /w3l-ab -->
+  <div class="w3l-cwp4-sec py-5" id="Vision">
+    <div class="container py-md-5 py-3">
+      <div class="cwp4-two row align-items-center">
+        <div class="cwp4-image col-lg-6 pr-lg-5 mb-lg-0 mb-5">
+          <img src="/media/assets/images/2.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="cwp4-text col-lg-6">
+          <h6 class="sub-titlehny">VISION</h6>
+          <h3 class="hny-title">To be the Premier International Recruitment Partner.</h3>
+          <p>
+            <span class="color_prim">At Danish Travels</span> is to be the premier international recruitment partner, recognized for our unwavering commitment to excellence, integrity, and inclusivity. We aspire to create a world where talent knows no boundaries, where every individual has access to their dream career, and every organization thrives with a diverse, skilled, and culturally-rich workforce. Through cutting-edge technology and personalized service, we aim to reshape the global job market, making it more accessible, transparent, and equitable for all.
+          </p>
+
+          <ul class="cont-4 mt-lg-5 mt-4">
+            <li>
+              <span class="fa fa-check-circle-o"></span> Quality Control System, 100% Satisfaction Guarantee
+            </li>
+            <li>
+              <span class="fa fa-check-circle-o"></span> Highly Professional Staff, Accurate Testing Processes
+            </li>
+            <li>
+              <span class="fa fa-check-circle-o"></span> Unrivalled workmanship, Professional and Qualified
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /w3l-ab -->
+  <!-- /w3l-ab-features -->
+  <section class="w3l-ab-features py-5" id="Mission">
+    <div class="container py-md-5 py-3">
+      <div class="header-top ml-auto pr-lg-5">
+        <h6 class="sub-titlehny mb-2">Our Mission</h6>
+        <h3 class="hny-title mb-4">to connect global talent with exceptional opportunities</h3>
+        <p class="pr-lg-5">
+          <span class="color_prim">At Danish Travels</span>, our mission is to connect global talent with exceptional opportunities. We are dedicated to bridging the gap between talented individuals seeking meaningful careers and organizations worldwide in search of top-tier talent. Our commitment to excellence, diversity, and innovation fuels our relentless pursuit of fostering success for both candidates and clients, ultimately contributing to a more interconnected and prosperous global workforce.
+        </p>
+      </div>
+
+      <div class="row features-w3pvt-main mt-5 pt-md-3" id="features">
+        <div class="col-lg-4 col-md-6 feature-gird">
+          <div class="row features-hny-inner-gd">
+            <div class="col-md-2 col-2 featured_grid_left">
+              <div class="icon_left_grid">
+                <span class="fa fa-linode" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="col-md-10 col-10 featured_grid_right_info">
+              <h4><a class="link-hny" href="#url">Strategic Talent Placement</a></h4>
+              <p>We strategically place talent in roles that align with their skills and aspirations, ensuring a powerful and meaningful career journey.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 feature-gird mt-md-0 mt-4">
+          <div class="row features-hny-inner-gd">
+            <div class="col-md-2 col-2 featured_grid_left">
+              <div class="icon_left_grid">
+                <span class="fa fa-pied-piper-alt" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="col-md-10 col-10 featured_grid_right_info">
+              <h4><a class="link-hny" href="#url">Expertise, Discipline & Precision</a></h4>
+              <p>We bring expertise, discipline, and precision to every aspect of our recruitment process, ensuring the perfect match between talent and opportunity.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 feature-gird mt-lg-0 mt-md-5 mt-4">
+          <div class="row features-hny-inner-gd">
+            <div class="col-md-2 col-2 featured_grid_left">
+              <div class="icon_left_grid">
+                <span class="fa fa-shield" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="col-md-10 col-10 featured_grid_right_info">
+              <h4><a class="link-hny" href="#url">Client Satisfaction Guarantee</a></h4>
+              <p>We are committed to ensuring 100% satisfaction for our clients, providing reliable and effective HR solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- // -->
+  <!-- /team-sec -->
+  <section class="w3l-team" id="Team">
+    <div class="team py-5">
+      <div class="container py-md-5 py-3">
+        <div class="header-section text-center mx-auto">
+          <h6 class="sub-titlehny">Leading Team</h6>
+          <h3 class="hny-title">Meet Our Team</h3>
+        </div>
+        <div class="row team-row pt-3 mt-5">
+          {% for i in teams %}
+            <div class="col-lg-3 col-sm-6 team-wrap">
+              <div class="team-info">
+                <div class="column position-relative img-circle">
+                  <a href="#url"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid" /></a>
+                </div>
+                <div class="column-btm">
+                  <h3 class="name-pos"><a href="#url">{{ i.name }}</a></h3>
+                  <p>{{ i.designation }}</p>
+                  <div class="social">
+                    <a href="tel:{{ i.phone }}" class="facebook"><span class="fa fa-phone" aria-hidden="true"></span></a>
+                    <a href="mailto:{{ i.Email }}" class="twitter"><span class="fa fa-envelope-open-o" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //team-sec -->
+  <!-- /w3l-ab-features -->
+  <section class="w3l-stats-about">
+    <div class="main-w3 py-5">
+      <div class="container py-md-5 py-3">
+        <div class="row align-items-center">
+          <div class="col-lg-6 title">
+            <h3 class="hny-title">Delivering High-Quality H.R Solutions</h3>
+            <p class="mt-4">Our commitment to excellence is reflected in our achievements and client satisfaction. We take pride in delivering high-quality HR solutions that make a difference.</p>
+          </div>
+          <div class="col-lg-6 main-cont-wthree-fea text-lg-center mt-lg-0 mt-5">
+            <div class="row pl-lg-4">
+              <div class="col-lg-6 col-md-3 col-6">
+                <div class="grids-speci1">
+                  <h3 class="title-spe">1200+</h3>
+                  <p>Successful Projects</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-3 col-6">
+                <div class="grids-speci1">
+                  <h3 class="title-spe">100%</h3>
+                  <p>Satisfaction Rate</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-3 col-6 mt-lg-5 mt-md-0 mt-5">
+                <div class="grids-speci1">
+                  <h3 class="title-spe">2.5K</h3>
+                  <p>Accurate Testing Processes</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-3 col-6 mt-lg-5 mt-md-0 mt-5">
+                <div class="grids-speci1">
+                  <h3 class="title-spe">100+</h3>
+                  <p>Unrivalled Workmanship</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- //about -->
+  <section class="w3l-testimonials py-5" id="testimonials">
+    <!-- main-slider -->
+    <div class="container py-md-4 mb-md-0 mb-md-5 mb-4">
+      <div class="heading text-center mx-auto">
+        <h3 class="hny-title text-center mb-5">What Our Clients Say!</h3>
+      </div>
+      <div class="owl-testimonial owl-carousel owl-theme">
+        {% for i in licenses %}
+          <div class="item">
+            <div class="slider-info">
+              <div class="img-circle"></div>
+              <div class="message-info">
+                <span class="fa fa-quote-left mr-2"></span>
+                <div class="message">{{ i.text }}</div>
+                <div class="name">- {{ i.name }}</div>
+                <div class="desp">{{ i.designation }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- /main-slider -->
+  </section>
+{% endblock %}

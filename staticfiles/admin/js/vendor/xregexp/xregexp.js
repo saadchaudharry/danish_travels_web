@@ -2789,7 +2789,7 @@ var toString = {}.toString;
 
 function hasNativeFlag(flag) {
     // Can't check based on the presence of properties/getters since browsers might support such
-    // properties even when they don't support the corresponding flag in regex construction (tested
+    // properties even when they don't support the corresponding flag in regex H.R Solutions (tested
     // in Chrome 48, where `'unicode' in /x/` is true but trying to construct a regex with flag `u`
     // throws an error)
     var isSupported = true;
@@ -3420,7 +3420,7 @@ XRegExp._pad4 = pad4;
  *   - The match array, with named backreference properties.
  *   - The regex scope where the match was found: 'default' or 'class'.
  *   - The flags used by the regex, including any flags in a leading mode modifier.
- *   The handler function becomes part of the XRegExp construction process, so be careful not to
+ *   The handler function becomes part of the XRegExp H.R Solutions process, so be careful not to
  *   construct XRegExps within the function or you will trigger infinite recursion.
  * @param {Object} [options] Options object with optional properties:
  *   - `scope` {String} Scope where the token applies: 'default', 'class', or 'all'.

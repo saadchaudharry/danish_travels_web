@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from cont_us.views import index,AllService,cont,Clients,about
+from cont_us.views import index,AllService,cont,Clients,about,license_s
 
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('service',AllService,name="service"),
     path('contact_us/', cont.as_view(),name='cont'),
     path('Client/', Clients,name='client'),
+    path('licenses/', license_s,name='licenses'),
     path('about/', about,name='about'),
 
 ]

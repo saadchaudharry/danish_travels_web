@@ -1,11 +1,16 @@
-<header id="site-header" class="fixed-top">
+<header id="site-header" class="fixed-top  nav-fixed">
     <div class="container">
        <nav class="navbar navbar-expand-lg navbar-dark stroke">
-          <h1><a class="navbar-brand" href="{% url  'index'%}">
-                <span class="sub-log">Danish</span>Travels
-            </a>
-          </h1>
-          
+
+
+
+            <h1>
+                <a class="navbar-brand" href="{% url 'index'%}">
+                    <img src="/media/assets/images/logo_3-removebg-preview.png" alt="Navbar Image" class="navbar-img img-fluid mr-2" width="45" height="35" >
+                    <span class="sub-log">Danish</span>Travels
+                </a>
+            </h1>
+
 
 
           <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
@@ -22,7 +27,7 @@
                    <a class="nav-link" href="{% url  'index'%}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                   <a class="nav-link dropdown-toggle" href="{% url  'about'%}" role="button" data-bs-toggle="dropdown"
                       aria-expanded="false">
                       About
                    </a>
@@ -37,7 +42,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                   <a class="nav-link dropdown-toggle" href="{% url  'service'%}" role="button" data-bs-toggle="dropdown"
                       aria-expanded="false">
                       Services
                    </a>
@@ -53,9 +58,9 @@
                 <li class="nav-item">
                    <a class="nav-link" href="{% url  'client'%}">Clients</a>
                 </li>
-                <li class="nav-item">
-                   <a class="nav-link" href="{% url  'licenses'%}">licenses</a>
-                </li>
+                <!--<li class="nav-item">-->
+                <!--   <a class="nav-link" href="{% url  'licenses'%}">licenses</a>-->
+                <!--</li>-->
 
                 <li class="nav-item">
                    <a class="nav-link" href="{% url  'cont'%}">Contact</a>

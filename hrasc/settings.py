@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mzfvjy%!#(e(h_u50&u^jr1uhs#me_*7y(86a2rmb@d1qej+32
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -68,7 +68,7 @@ ROOT_URLCONF = 'hrasc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['/home/danishtravels/hrasc/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,11 +139,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Static files (CSS, JavaScript, images)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')  # This is the absolute path to your static files directory
+STATIC_ROOT = os.path.join(BASE_DIR,'static_cdn')  # This is the absolute path to your static files directory
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'hrasc', 'static_cdn')  # This should point to the directory containing your app-specific static files
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR,'static_cdn')  # This should point to the directory containing your app-specific static files
+# ]
 
 MEDIA_URL  = '/media/'
 

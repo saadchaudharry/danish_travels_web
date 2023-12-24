@@ -1,3 +1,30 @@
+
+<script>window.location.hash && document.getElementById(window.location.hash.substr(1))?.scrollIntoView({ behavior: 'smooth' });</script>
+
+  <script>
+    // Get the checkbox element by its ID
+    const checkbox = document.getElementById('checkbox');
+
+    // Add an event listener to the checkbox
+    checkbox.addEventListener('change', function() {
+      // Log the value of the checkbox when it changes
+
+    if ( checkbox.checked){
+          $("#site-header").addClass("bg-dark");
+          $("#site-header").removeClass("bg-white");
+    }
+    else{
+        $("#site-header").addClass("bg-white");
+        $("#site-header").removeClass("bg-dark");
+    }
+
+
+
+    });
+  </script>
+
+
+
       <!-- Template JavaScript -->
       <script src="/media/assets/js/jquery-3.3.1.min.js"></script>
       <!-- script for testimonials -->
@@ -83,25 +110,40 @@
       <!-- //stats number counter -->
       <!-- disable body scroll which navbar is in active -->
       <script>
-         $(function () {
-            $('.navbar-toggler').click(function () {
-               $('body').toggleClass('noscroll');
-            })
-         });
+        //  $(function () {
+        //     $('.navbar-toggler').click(function () {
+        //       $('body').toggleClass('noscroll');
+        //     })
+        //  });
       </script>
       <!-- disable body scroll which navbar is in active -->
       <!--/MENU-JS-->
-      <script>
+ <script>
+
+
+ var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.querySelector("#site-header").style.top = "0";
+    } else {
+      document.querySelector("#site-header").style.top = "-80px"; // Adjust this value based on your navbar height
+    }
+    prevScrollpos = currentScrollPos;
+  }
+
+
+
          $(window).on("scroll", function () {
             var scroll = $(window).scrollTop();
-   
+
             if (scroll >= 80) {
-               $("#site-header").addClass("nav-fixed");
+            //   $("#site-header").addClass("nav-fixed");
             } else {
-               $("#site-header").removeClass("nav-fixed");
+            //   $("#site-header").removeClass("nav-fixed");
             }
          });
-   
+
          //Main navigation Active Class Add Remove
          $(".navbar-toggler").on("click", function () {
             $("header").toggleClass("active");

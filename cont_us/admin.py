@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ContactUs,Service,Gallary,licenses,Client,team,Sector
+from .models import ContactUs,Service,Gallary,licenses,Client,team,Sector,process_info
 
 # Register your models here.
 
@@ -10,3 +10,4 @@ admin.site.register(licenses)
 admin.site.register(Sector)
 admin.site.register(Client)
 admin.site.register(team)
+admin.site.register(process_info)

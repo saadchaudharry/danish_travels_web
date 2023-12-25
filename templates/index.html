@@ -85,7 +85,7 @@
                   <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary"></div>
                   <div class="ms-3">
                     <p class="mb-2">Email us</p>
-                    <h5 class="mb-0">info@Danishtravels.co</h5>
+                    <h5 class="mb-0">info@Danishtravels.com</h5>
                   </div>
                 </div>
               </div>
@@ -247,6 +247,12 @@
         </div>
         <div class="cwp4-image col-lg-6 pl-lg-5 mt-lg-0 mt-5">
           <img src="/media/assets/images/work.jpg" class="img-fluid" alt="" />
+
+            <div class="buttons mt-5">
+                <a href="{% url  'process'%}" class="btn btn-style btn-primary mr-2">View Process</a>
+            </div>
+
+
         </div>
       </div>
     </div>
@@ -268,16 +274,22 @@
         {% for s in Services %}
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="grid-block">
-              <a href="blog-single.html" class="d-block p-lg-4 p-3">
+              <a href="{% url 'ser_detail' slug=s.slug %}" class="d-block p-lg-4 p-3">
                 <img src="/media/{{ s.thumbnail }}" alt="Your Image" style="max-width: 64px; max-height: 64px;" />
-                <h4 class="my-3">{{ s.name }}</h4>
-                <p class="">{{ s.about }}</p>
+                <h4 class="my-3">{{ s.title }}</h4>
+                <p class="">{{ s.about|slice:":90" }} .....</p>
               </a>
             </div>
           </div>
         {% endfor %}
 
       </div>
+
+
+          <div class="buttons mt-5 text-center">
+            <a href="{% url  'service'%}" class="btn btn-style btn-primary mr-2">View Service</a>
+          </div>
+
     </div>
   </section>
   <!-- //projects -->

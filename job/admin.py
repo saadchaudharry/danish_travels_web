@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Carousel,Client_review
+from .models import Carousel,Client_review,Employer,Employee
 
 # Register your models here.
 
@@ -18,3 +18,5 @@ class Client_reviewAdmin(admin.ModelAdmin):
     list_display = ('title','position', )
 
 admin.site.register(Client_review,Client_reviewAdmin)
+admin.site.register(Employer)
+admin.site.register(Employee)

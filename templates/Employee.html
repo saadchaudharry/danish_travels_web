@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+
+<section class="w3l-contact-11 py-5">
+    <section class="w3l-bottom pt-5">
+    <div class="container py-md-4 py-3 text-center">
+
+              <div class="title-content text-center">
+        <!--<h6 class="sub-titlehny color_prim">Contact</h6>-->
+        <h3 class="hny-title color_prim">We Care</h3>
+    </div>
+
+
+      <div class="header-section text-center mx-auto">
+        <h3 class="hny-title">For Employee</h3>
+        <p class="my-3 ">
+
+Danish Travels strives to make a difference across all levels of a business.<br><br> However, we understand that unforeseen issues may arise between employers and employees.<br><br> That's why we have created the Happiness Team service for employees.
+We communicate with your staff to answer your concerns and help you with resolving potential disputes you might face. Our dedicated team will always be eager to assist and intervene, whether visa issues and agreement misunderstandings arise or even to provide a simple clarification.<br><br>
+We care about your experience, and we always strive for 360 degrees of smooth service. Complete the form, let us know your concerns, and we'll be in touch to assist promptly.
+
+
+
+        </p>
+      </div>
+
+      <div class="buttons mt-5">
+        <a href="{% url  'Emp'%}" class="btn btn-style btn-secondary mr-2">Employer</a>
+        <a href="{% url  'Empy'%}" class="btn btn-style btn-primary ml-2">Employee</a>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="form-41-mian section-gap mt-5">
+    <div class="container">
+      <div class="d-grid">
+        <div class="form-inner-cont">
+
+
+        <form method="post" class="fgrn">{% csrf_token %}
+          <div class="row">
+            <div class="col-md-6">
+              {{ form.first_name|as_crispy_field }}
+              {{ form.last_name|as_crispy_field }}
+            </div>
+            <div class="col-md-6">
+              {{ form.email_address|as_crispy_field }}
+              {{ form.phone_number|as_crispy_field }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              {{ form.message|as_crispy_field }}
+            </div>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-style btn-primary">Submit Message</button>
+        </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  {% endblock %}

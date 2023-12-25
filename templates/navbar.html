@@ -3,6 +3,7 @@
        <nav class="navbar navbar-expand-lg navbar-dark stroke">
 
 
+{% load custom_filters %}
 
             <h1>
                 <a class="navbar-brand" href="{% url 'index'%}">
@@ -37,6 +38,7 @@
                       <li><a class="dropdown-item" href="{% url  'about'%}#Team">Team</a></li>
                       <li><a class="dropdown-item" href="{% url  'about'%}#testimonials">Testimonials</a></li>
                       <li><a class="dropdown-item" href="{% url  'service'%}#Sector">Sector</a></li>
+                      <li><a class="dropdown-item" href="{% url  'process'%}">Process</a></li>
 
                    </ul>
                 </li>
@@ -45,22 +47,31 @@
                    <a class="nav-link dropdown-toggle" href="{% url  'service'%}" role="button" data-bs-toggle="dropdown"
                       aria-expanded="false">
                       Services
+
                    </a>
                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="{% url  'service'%}#Mission">Mission</a></li>
-                      <li><a class="dropdown-item" href="{% url  'service'%}#Services">Services</a></li>
-                      <li><a class="dropdown-item" href="{% url  'service'%}#Sector">Sector</a></li>
+                        {% for service in custom_filters|services_list %}
+                              <li><a class="dropdown-item" href="{% url 'ser_detail' slug=service.slug %}">{{ service.title }}</a></li>
+                        {% endfor %}
+
                    </ul>
                 </li>
-
-
 
                 <li class="nav-item">
                    <a class="nav-link" href="{% url  'client'%}">Clients</a>
                 </li>
-                <!--<li class="nav-item">-->
-                <!--   <a class="nav-link" href="{% url  'licenses'%}">licenses</a>-->
-                <!--</li>-->
+
+
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="{% url  'Emp'%}" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      We Care
+                   </a>
+                   <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url  'Emp'%}">Employer</a></li>
+                      <li><a class="dropdown-item" href="{% url  'Empy'%}#Services">Employee</a></li>
+                   </ul>
+                </li>
 
                 <li class="nav-item">
                    <a class="nav-link" href="{% url  'cont'%}">Contact</a>
@@ -69,6 +80,25 @@
                 <li class="top-quote ml-lg-4 mt-lg-0 mt-3">
                    <a href="{% url  'cont'%}" class="btn btn-style btn-primary">Get a Quote</a>
                 </li>
+
+                <li class="top-quote ml-lg-4 mt-lg-0 mt-3">
+                        <div id="google_translate_element"></div>
+                </li>
+
+
+
+
+                <!--<li class="nav-item dropdown">-->
+                <!--    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
+                <!--        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                <!--        Language-->
+                <!--    </a>-->
+                <!--    <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+                <!--        <a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a>-->
+                <!--        <a class="dropdown-item" href="#" onclick="changeLanguage('es')">Spanish</a>-->
+                        <!-- Add more languages as needed -->
+                <!--    </div>-->
+                <!--</li>-->
 
 
 

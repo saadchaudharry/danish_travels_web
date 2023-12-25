@@ -177,10 +177,10 @@
         {% for s in Services %}
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="grid-block">
-              <a href="#Services" class="d-block p-lg-4 p-3">
+              <a href="{% url 'ser_detail' slug=s.slug %}" class="d-block p-lg-4 p-3">
                 <img src="/media/{{ s.thumbnail }}" alt="Your Image" style="max-width: 64px; max-height: 64px;" />
-                <h4 class="my-3">{{ s.name }}</h4>
-                <p class="">{{ s.about }}</p>
+                <h4 class="my-3">{{ s.title }}</h4>
+                <p class="">{{ s.about|slice:":90" }} .....</p>
               </a>
             </div>
           </div>

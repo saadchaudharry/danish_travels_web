@@ -4,17 +4,23 @@
 {% block body %}
 
 
-<div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
-            <img src="/media/{{ object.thumbnail }}" class="d-block mx-lg-auto img-fluid" alt="Services image" width="700" height="500" loading="lazy">
-        </div>
-        <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3 " style="color:#c71f4c">{{ object.title }}</h1>
-            <p class="lead">{{ object.about }}</p>
+<div class="container  py-5">
 
+
+    <div class="feature col g-5 py-5">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center">
+          <img src="/media/{{ object.thumbnail }}" class="d-block mx-lg-auto img-fluid" alt="Services image" width="100" height="100" loading="lazy">
+        </div>
+        <h3 class="fs-2 " style="color:#c71f4c">{{ object.title }}</h3>
+        <p>{{ object.about }}</p>
+        <div class="buttons mt-5">
+            <a href="/contact_us/" class="btn btn-style btn-primary mr-2">Book Consultation</a>
         </div>
     </div>
+
+
+
+
 </div>
 
 

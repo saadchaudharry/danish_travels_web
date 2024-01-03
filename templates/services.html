@@ -200,11 +200,12 @@
         </div>
 
 
+        <div class="row">
           {% for i in Sector %}
-          <div class="col-lg-3 col-sm-6 team-wrap mt-sm-0 pt-sm-0 mt-4 pt-2">
+          <div class="col-lg-3 col-sm-6 team-wrap mt-sm-0 pt-sm-0 my-4 py-2">
             <div class="team-info">
               <div class="column position-relative img-circle">
-                <a href="#url"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid" /></a>
+                <a href="{% url  'cont'%}"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid" /></a>
               </div>
               <div class="column-btm">
                 <h3 class="name-pos"><a href="#url">{{ i.name }}</a></h3>
@@ -212,6 +213,8 @@
             </div>
           </div>
           {% endfor %}
+        </div>
+
 
         </div>
       </div>

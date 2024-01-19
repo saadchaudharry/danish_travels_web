@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
+<style>
+  .card img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: 200px; /* Set the fixed height for the images */
+    object-fit: contain; /* Maintain aspect ratio and cover the container */
+  }
+</style>
   <div class="inner-banner">
   </div>
   <section class="w3l-breadcrumb">
@@ -26,22 +32,24 @@
             have entrusted us with their talent acquisition and HR needs.
           </p>
         </div>
-        <div class="row galler-top mt-lg-5 mt-4">
 
-          {% for i in Clients %}
 
-          <div class="col-md-4 protfolio-item hover14">
-            <a href="/media/{{ i.thumbnail }}" data-lightbox="example-set" class="mb-4"
-              data-title="{{ i.name }}">
-              <figure>
-                <img src="/media/{{ i.thumbnail }}" alt="product" class="img-fluid">
-              </figure>
-            </a>
-          </div>
-          {% endfor %}
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
 
-          
-        </div>
+            {% for i in Clients %}
+
+                    <div class="col">
+
+                      <div class="card shadow-sm  rounded-3"  data-aos="fade-up" data-aos-delay="100" style='border:5px solid #c71f4c'>
+                        <img src="/media/{{ i.thumbnail }}" class="img-fluid card-img-top mx-auto" alt="">
+                      </div>
+
+                    </div>
+            {% endfor %}
+
+
+      </div>
+
       </div>
     </div>
   </section>

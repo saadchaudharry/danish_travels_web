@@ -1,11 +1,8 @@
 
 <script>window.location.hash && document.getElementById(window.location.hash.substr(1))?.scrollIntoView({ behavior: 'smooth' });</script>
 
-
 <script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
+    function googleTranslateElementInit() {  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -138,7 +135,7 @@ function googleTranslateElementInit() {
     if (prevScrollpos > currentScrollPos) {
       document.querySelector("#site-header").style.top = "0";
     } else {
-      document.querySelector("#site-header").style.top = "-80px"; // Adjust this value based on your navbar height
+      document.querySelector("#site-header").style.top = "-100px"; // Adjust this value based on your navbar height
     }
     prevScrollpos = currentScrollPos;
   }

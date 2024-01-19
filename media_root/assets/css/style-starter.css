@@ -23,7 +23,7 @@ Author URL: http://Hyperdec.com
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #c71f4c; 
+  --primary: #c71f4c;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -8786,7 +8786,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important;
+  padding-top: 5rem !important;
 }
 
 .pr-5,
@@ -14612,7 +14612,7 @@ header.active {
 }
 
 .navbar .navbar-brand img {
-  max-width: 140px;
+  /*max-width: 140px;*/
   transition: all 0.5s ease;
 }
 
@@ -14773,7 +14773,7 @@ nav ul li a:hover {
   }
 
   .navbar .navbar-brand img {
-    max-width: 109px;
+    max-width: 250px;
   }
 
   .navbar-expand-lg .btn-gradient {
@@ -14807,7 +14807,7 @@ nav ul li a:hover {
     /* top:7px; */
    }
   .navbar .navbar-brand img {
-    max-width: 140px;
+    /*max-width: 140px;*/
   }
 
   .navbar-toggler {
@@ -14866,7 +14866,7 @@ nav ul li a:hover {
   }
   header.nav-fixed {
     height: auto;
-    padding:15px 0;
+    padding:7px 0;
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -14911,7 +14911,7 @@ nav ul li a:hover {
   }
   .mobile-position {
     position: absolute;
-    right: 50px;
+    right: 52px;
     /* top:3px; */
   }
   .navbar .navbar-brand {

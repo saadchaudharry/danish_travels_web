@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
 
 from .form import ContactUS_form
-from .models import Service, team, Client, ContactUs, Sector, licenses ,process_info
+from .models import Service, team, Client, ContactUs, Sector, licenses ,process_info,catagory
 
 from job.models import Carousel, Client_review,Employer,Employee
 from job.form import Employer_form,Employee_form
@@ -95,6 +95,26 @@ class Empy(CreateView):
 
 
 
+
+def Allcatagory(request):
+    catag = catagory.objects.all()
+    Sec  = Sector.objects.all()
+
+    context={'catag':catag,'data':Sec}
+    return render(request,'sector.html',context)
+
+
+def catagorySec(request,catagory_slug):
+    catag = catagory.objects.all()
+    Sec  = Sector.objects.all()
+    # prod2  =youtubee.objects.all()
+
+    if catagory_slug:
+        cata = get_object_or_404(catagory,slug=catagory_slug)
+        Sec = Sec.filter(catagory=cata)
+
+    context={'catag':catag,'data':Sec}
+    return render(request,'sector.html',context)
 
 
 

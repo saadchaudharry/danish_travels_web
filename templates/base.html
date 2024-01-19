@@ -43,18 +43,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/i18next@22.4.5/dist/umd/i18next.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.1/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        // Simulate a delay (you can replace this with actual loading time)
         setTimeout(function () {
           document.getElementById('loader').style.display = 'none';
           document.getElementById('content').style.display = 'block';
-
-          // Redirect to element with id from fragment identifier
           window.location.hash && document.getElementById(window.location.hash.substr(1))?.scrollIntoView({ behavior: 'smooth' });
-        }, 1300); // Adjust the delay time in milliseconds
+        }, 1300);
       });
     </script>
 

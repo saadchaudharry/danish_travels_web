@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="w3l-team" id="Sector">
+   <div class="team py-5">
+      <div class="container py-md-5 py-3">
+         <div class="header-section text-center mx-auto">
+            <h6 class="sub-titlehny">Industries We Serve</h6>
+            <h3 class="hny-title">Sector</h3>
+            <p class="my-3">At Danish Travels, our expertise spans across various sectors. We specialize in delivering top-notch solutions tailored to the unique needs of each industry. From residential and commercial H.R Solutions to innovative project management, we are committed to excellence.</p>
+         </div>
+
+         <div class=" bg-light m-0">
+            <div class="container">
+               <div class="splide" id="">
+                  <div class="splide__track">
+                     <ul class="splide__list">
+                        <li class="splide__slide text-center">
+                           <a style="text-decoration: none" href="{% url 'allSEC' %}">
+                              <img src="/media/assets/images/visualization.png" class="card-img-top m-4" style="height:64px;width:64px">
+                              <h5 class="card-title text-dark">All</h5>
+                           </a>
+                        </li>
+                        {% for i in catag %}
+                        <li class="splide__slide text-center">
+                           <a style="text-decoration: none" href="{% url 'cataSlug' i.slug %}">
+                              <img src="/media/{{ i.image }}" class="card-img-top m-4" style="height:64px;width:64px">
+                              <h5 class="card-title text-dark">{{ i.title }}</h5>
+                           </a>
+                        </li>
+                        {% endfor %}
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+<br>
+<br>
+
+         <div class="row">
+            {% for i in data %}
+            <div class="col-lg-3 col-sm-6 team-wrap mt-sm-0 pt-sm-0 my-4 py-2">
+               <div class="team-info">
+                  <div class="column position-relative img-circle">
+                     <a href="{% url  'cont'%}"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid" /></a>
+                  </div>
+                  <div class="column-btm">
+                     <h3 class="name-pos"><a href="#url">{{ i.name }}</a></h3>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+
+      </div>
+   </div>
+   </div>
+</section>
+{% endblock body %}

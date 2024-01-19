@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from cont_us.views import index,AllService,cont,Clients,about,license_s,Emp,Empy,service_details,process_info_view
+from cont_us.views import index,AllService,cont,Clients,about,license_s,Emp,Empy,service_details,process_info_view,Allcatagory,catagorySec
 
 
 urlpatterns = [
@@ -35,6 +35,10 @@ urlpatterns = [
 
     path('process/', process_info_view,name='process'),
 
+
+
+    path('Sector/', Allcatagory,name='allSEC'),
+    path('Sector/<catagory_slug>', catagorySec, name='cataSlug'),
 
     path('service_details/<slug:slug>/', service_details, name="ser_detail"),
 

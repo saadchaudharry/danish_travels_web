@@ -127,10 +127,29 @@ class Client(models.Model):
         verbose_name_plural = 'Clients'
 
 
+class catagory(models.Model):
+    image =models.ImageField()
+    title  =models.CharField(max_length=100)
+    slug  =models.SlugField(max_length=100,blank=True,null=True)
+
+    def __str__(self):
+        return str(self.title)
+
+def catagorySLUG(sender,instance,*args,**kwargs):
+    if not instance.slug:
+        instance.slug =unique_slug_generator(instance)
+
+
+pre_save.connect(catagorySLUG,sender=catagory)
+
+
+
 class Sector(models.Model):
     name = models.CharField(max_length=999)
     thumbnail = models.ImageField(upload_to="Sector")
     index = models.BooleanField()
+    # catagory = models.ForeignKey(catagory, on_delete=models.CASCADE)
+    catagory = models.ForeignKey(catagory, on_delete=models.CASCADE,blank=True,null=True)
 
     def __str__(self):
         return str(self.name)

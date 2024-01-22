@@ -53,6 +53,8 @@
 
                    </a>
                    <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="{% url 'service' %}#Services">All Service</a></li>
+
                         {% for service in custom_filters|services_list %}
                               <li><a class="dropdown-item" href="{% url 'ser_detail' slug=service.slug %}">{{ service.title }}</a></li>
                         {% endfor %}

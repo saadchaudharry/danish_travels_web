@@ -58,8 +58,8 @@
         </div>
 
         <div class="col-sm-8 col-lg-4 mt-4 mt-lg-0 px-lg-4">
-          <br /><br /><br /><br /><br /><br />
-          <img class="w-100 rounded" src="https://expertfasteners.com/media/static/images/mid2.jpg" />
+          <br /><br /><br />
+          <img class="w-100 rounded" src="/media/assets/images/700wali.png" />
         </div>
 
         <div class="col-sm-8 col-lg-4 mt-5 mt-lg-0 ps-lg-3 ps-xl-4">
@@ -190,34 +190,19 @@
   </section>
   <!-- //grids -->
 
-  <section class="w3l-team" id="Sector">
-    <div class="team py-5">
-      <div class="container py-md-5 py-3">
-        <div class="header-section text-center mx-auto">
-          <h6 class="sub-titlehny">Industries We Serve</h6>
-          <h3 class="hny-title">Sector</h3>
-          <p class="my-3">At Danish Travels, our expertise spans across various sectors. We specialize in delivering top-notch solutions tailored to the unique needs of each industry. From residential and commercial H.R Solutions to innovative project management, we are committed to excellence.</p>
-        </div>
+  <!--<section class="w3l-team" id="Sector">-->
+  <!--  <div class="team py-5">-->
+  <!--    <div class="container py-md-5 py-3">-->
+  <!--      <div class="header-section text-center mx-auto">-->
+  <!--        <h6 class="sub-titlehny">Industries We Serve</h6>-->
+  <!--        <h3 class="hny-title">Sector</h3>-->
+  <!--        <p class="my-3">At Danish Travels, our expertise spans across various sectors. We specialize in delivering top-notch solutions tailored to the unique needs of each industry. From residential and commercial H.R Solutions to innovative project management, we are committed to excellence.</p>-->
+  <!--      </div>-->
 
 
-        <div class="row">
-          {% for i in Sector %}
-          <div class="col-lg-3 col-sm-6 team-wrap mt-sm-0 pt-sm-0 my-4 py-2">
-            <div class="team-info">
-              <div class="column position-relative img-circle">
-                <a href="{% url  'cont'%}"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid" /></a>
-              </div>
-              <div class="column-btm">
-                <h3 class="name-pos"><a href="#url">{{ i.name }}</a></h3>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
 
-
-        </div>
-      </div>
-    </div>
-  </section>
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</section>-->
 {% endblock %}

@@ -15,7 +15,7 @@ class Carousel(models.Model):
     heading2 = models.CharField(max_length=999)
     enable = models.BooleanField(default=False)
     position = models.IntegerField(blank=True, null=True, unique=True)
-    text = models.TextField(max_length=9999)
+    text = models.TextField(max_length=9999, null=True, blank=True)
     IMG = models.ImageField(upload_to='carousel/img1', null=True, blank=True)
     link_lable1 = models.CharField(max_length=9999, null=True, blank=True)
     link1 = models.CharField(max_length=9999, null=True, blank=True)

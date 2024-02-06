@@ -24,7 +24,7 @@ def AllService(request):
     Sectors = Sector.objects.all()
 
     context = {'Services': Services, 'Sector': Sectors}
-    return render(request, 'services.html', context)
+    return render(request, 'service_main.html', context)
 
 
 def service_details(request,slug):

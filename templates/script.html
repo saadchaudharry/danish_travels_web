@@ -4,6 +4,7 @@
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+
 <script>
     new Splide('.splide', {
        perPage: 4,
@@ -112,35 +113,56 @@
    $('.counter').countUp();
 </script>
 <script>
-   //  $(function () {
-   //     $('.navbar-toggler').click(function () {
-   //       $('body').toggleClass('noscroll');
-   //     })
-   //  });
-</script>
-<script>
-   var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.querySelector("#site-header").style.top = "0";
-      } else {
-        document.querySelector("#site-header").style.top = "-100px";
+  $(document).ready(function(){
+    // Get the current URL path
+    var path = window.location.pathname;
+
+    // Iterate over each nav-link and check if its href matches the current path
+    $('.nav-link').each(function(){
+      var href = $(this).attr('href');
+      if (path === href) {
+        // Add the 'active' class to the matching nav-link
+        $(this).addClass('active');
+        $(this).removeClass('sub-titlehny');
+
       }
-      prevScrollpos = currentScrollPos;
-    }
-       $(window).on("scroll", function () {
-              var scroll = $(window).scrollTop();
+    });
+  });
+</script>
 
-              if (scroll >= 80) {
-              //   $("#site-header").addClass("nav-fixed");
-              } else {
-              //   $("#site-header").removeClass("nav-fixed");
-              }
-           });
 
-           //Main navigation Active Class Add Remove
-           $(".navbar-toggler").on("click", function () {
+<script>
+        $(window).on("scroll", function () {
+          var scroll = $(window).scrollTop();
+
+          if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+            $("#nav_img").attr('src', '/media/assets/images/Pi7_Tool_8aQM2c.png');
+
+          } else {
+            $("#site-header").removeClass("nav-fixed");
+            $("#nav_img").attr('src', '/media/assets/images/output-onlinepngtools (2).png');
+
+          }
+        });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+
+
+       $(".navbar-toggler").on("click", function () {
               $("header").toggleClass("active");
            });
            $(document).on("ready", function () {
@@ -154,7 +176,80 @@
               });
            });
 
+// Get the current URL path
+  var currentPath = window.location.pathname;
+
+  // Get all the navigation links
+  var navLinks = document.querySelectorAll('nav a');
+
+  // Loop through each link and add the 'active' class if the href matches the current path
+  for (var i = 0; i < navLinks.length; i++) {
+    var link = navLinks[i];
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  }
 </script>
+
+<script>
+ $(document).ready(function () {
+            // Show dropdown on hover
+            $('.nav-item.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+            });
+
+            // Handle click on the dropdown-toggle links
+            $('.nav-link.dropdown-toggle').on('click', function (e) {
+                // Get the dynamically generated URL from the href attribute
+                var dynamicUrl = $(this).attr('href');
+
+                // If the URL is not empty, navigate to it
+                if (dynamicUrl && dynamicUrl !== "#") {
+                    e.preventDefault(); // Prevent the default behavior of the link
+                    window.location.href = dynamicUrl; // Navigate to the dynamically generated URL
+                }
+            });
+        });k
+</script>
+
+<!--<script>-->
+<!--   var prevScrollpos = window.pageYOffset;-->
+<!--    window.onscroll = function() {-->
+<!--      var currentScrollPos = window.pageYOffset;-->
+<!--      if (prevScrollpos > currentScrollPos) {-->
+<!--        document.querySelector("#site-header").style.top = "0";-->
+<!--      } else {-->
+<!--        document.querySelector("#site-header").style.top = "0px";-->
+<!--      }-->
+<!--      prevScrollpos = currentScrollPos;-->
+<!--    }-->
+<!--       $(window).on("scroll", function () {-->
+<!--              var scroll = $(window).scrollTop();-->
+
+<!--              if (scroll >= 80) {-->
+<!--                 $("#site-header").addClass("nav-fixed");-->
+<!--              } else {-->
+<!--                 $("#site-header").removeClass("nav-fixed");-->
+<!--              }-->
+<!--           });-->
+
+<!--           $(".navbar-toggler").on("click", function () {-->
+<!--              $("header").toggleClass("active");-->
+<!--           });-->
+<!--           $(document).on("ready", function () {-->
+<!--              if ($(window).width() > 991) {-->
+<!--                 $("header").removeClass("active");-->
+<!--              }-->
+<!--              $(window).on("resize", function () {-->
+<!--                 if ($(window).width() > 991) {-->
+<!--                    $("header").removeClass("active");-->
+<!--                 }-->
+<!--              });-->
+<!--           });-->
+
+<!--</script>-->
 <!--//MENU-JS-->
 <script src="/media/assets/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -38,21 +38,21 @@
                    <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="{% url  'about'%}#Vision">Vision</a></li>
                       <li><a class="dropdown-item" href="{% url  'about'%}#Mission">Mission</a></li>
-                      <li><a class="dropdown-item" href="{% url  'about'%}#Team">Team</a></li>
-                      <li><a class="dropdown-item" href="{% url  'about'%}#testimonials">Testimonials</a></li>
-                      <li><a class="dropdown-item" href="{% url  'allSEC'%}">Sector</a></li>
-                      <li><a class="dropdown-item" href="{% url  'process'%}">Process</a></li>
+                      <!--<li><a class="dropdown-item" href="{% url  'about'%}#Team">Team</a></li>-->
+                      <!--<li><a class="dropdown-item" href="{% url  'about'%}#testimonials">Testimonials</a></li>-->
+                      <li><a class="dropdown-item" href="{% url  'allSEC'%}">Industries We Serve</a></li>
+                      <!--<li><a class="dropdown-item" href="{% url  'process'%}">Process</a></li>-->
 
                    </ul>
                 </li>
 
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown text-left">
                     <a class="nav-link dropdown-toggle" href="{% url 'service' %}" role="button" data-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu text-left" style="" >
                         {% for service in custom_filters|services_list %}
-                            <li><a class="dropdown-item" href="{% url 'ser_detail' slug=service.slug %}">{{ service.title }}</a></li>
+                            <li><a class="dropdown-item text-wrap" href="{% url 'ser_detail' slug=service.slug %}">{{ service.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>

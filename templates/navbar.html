@@ -1,9 +1,10 @@
+{% load custom_filters %}
+
 <header id="site-header" class="fixed-top  ">
     <div class="container">
        <nav class="navbar navbar-expand-lg navbar-dark stroke">
 
 
-{% load custom_filters %}
 
             <h1>
                 <a class="navbar-brand" href="{% url 'index' %}" style="font-family: 'Toxigenesis';font-size:1.69rem">
@@ -38,10 +39,9 @@
                    <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="{% url  'about'%}#Vision">Vision</a></li>
                       <li><a class="dropdown-item" href="{% url  'about'%}#Mission">Mission</a></li>
-                      <!--<li><a class="dropdown-item" href="{% url  'about'%}#Team">Team</a></li>-->
-                      <!--<li><a class="dropdown-item" href="{% url  'about'%}#testimonials">Testimonials</a></li>-->
                       <li><a class="dropdown-item" href="{% url  'allSEC'%}">Industries We Serve</a></li>
-                      <!--<li><a class="dropdown-item" href="{% url  'process'%}">Process</a></li>-->
+                      <li><a class="dropdown-item" href="{% url  'chairman'%}">Chairman's Message</a></li>
+                      <li><a class="dropdown-item" href="{% url  'about'%}#PLACEMENT">PLACEMENT SOLUTIONS</a></li>
 
                    </ul>
                 </li>

@@ -213,6 +213,21 @@
             });
         });k
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var navItems = document.querySelectorAll(".navbar-nav li");
+
+    navItems.forEach(function (item) {
+        item.addEventListener("mouseenter", function () {
+            this.classList.add("active");
+        });
+
+        item.addEventListener("mouseleave", function () {
+            this.classList.remove("active");
+        });
+    });
+});
+</script>
 
 <!--<script>-->
 <!--   var prevScrollpos = window.pageYOffset;-->

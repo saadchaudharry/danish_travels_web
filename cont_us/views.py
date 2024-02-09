@@ -118,4 +118,9 @@ def catagorySec(request,catagory_slug):
 
 
 
+def chairman(request):
+
+    context = {}
+    return render(request, 'chairmans_message.html', context)
+
 

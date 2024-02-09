@@ -101,38 +101,38 @@
   </section>
   <!-- // -->
   <!-- /team-sec -->
-  <section class="w3l-team" id="Team">
-    <div class="team py-5">
-      <div class="container py-md-5 py-3">
-        <div class="header-section text-center mx-auto">
-          <h6 class="sub-titlehny">Leading Team</h6>
-          <h3 class="hny-title">Meet Our Team</h3>
-        </div>
-        <div class="row team-row pt-3 mt-5">
-          {% for i in teams %}
-            <div class="col-lg-3 col-sm-6 team-wrap">
-              <div class="team-info">
-                <div class="column position-relative img-circle">
-                  <a href="#url"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid" /></a>
-                </div>
-                <div class="column-btm">
-                  <h3 class="name-pos"><a href="#url">{{ i.name }}</a></h3>
-                  <p>{{ i.designation }}</p>
-                  <div class="social">
-                    <a href="tel:{{ i.phone }}" class="facebook"><span class="fa fa-phone" aria-hidden="true"></span></a>
-                    <a href="mailto:{{ i.Email }}" class="twitter"><span class="fa fa-envelope-open-o" aria-hidden="true"></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </section>
+  <!--<section class="w3l-team" id="Team">-->
+  <!--  <div class="team py-5">-->
+  <!--    <div class="container py-md-5 py-3">-->
+  <!--      <div class="header-section text-center mx-auto">-->
+  <!--        <h6 class="sub-titlehny">Leading Team</h6>-->
+  <!--        <h3 class="hny-title">Meet Our Team</h3>-->
+  <!--      </div>-->
+  <!--      <div class="row team-row pt-3 mt-5">-->
+  <!--        {% for i in teams %}-->
+  <!--          <div class="col-lg-3 col-sm-6 team-wrap">-->
+  <!--            <div class="team-info">-->
+  <!--              <div class="column position-relative img-circle">-->
+  <!--                <a href="#url"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid" /></a>-->
+  <!--              </div>-->
+  <!--              <div class="column-btm">-->
+  <!--                <h3 class="name-pos"><a href="#url">{{ i.name }}</a></h3>-->
+  <!--                <p>{{ i.designation }}</p>-->
+  <!--                <div class="social">-->
+  <!--                  <a href="tel:{{ i.phone }}" class="facebook"><span class="fa fa-phone" aria-hidden="true"></span></a>-->
+  <!--                  <a href="mailto:{{ i.Email }}" class="twitter"><span class="fa fa-envelope-open-o" aria-hidden="true"></span></a>-->
+  <!--                </div>-->
+  <!--              </div>-->
+  <!--            </div>-->
+  <!--          </div>-->
+  <!--        {% endfor %}-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</section>-->
   <!-- //team-sec -->
   <!-- /w3l-ab-features -->
-  <section class="w3l-stats-about">
+  <section class="w3l-stats-about w3l-cwp4-sec">
     <div class="main-w3 py-5">
       <div class="container py-md-5 py-3">
         <div class="row align-items-center">
@@ -174,28 +174,44 @@
   </section>
 
   <!-- //about -->
-  <section class="w3l-testimonials py-5" id="testimonials">
-    <!-- main-slider -->
-    <div class="container py-md-4 mb-md-0 mb-md-5 mb-4">
-      <div class="heading text-center mx-auto">
-        <h3 class="hny-title text-center mb-5">What Our Clients Say!</h3>
+  <section class="w3l-grids-3 py-5" id="PLACEMENT">
+    <div class="container py-md-5 py-3">
+      <div class="row bottom-ab-grids align-items-center">
+        <div class="col-lg-12 bottom-ab-left">
+          <h6 class="sub-titlehny">Manpower Placement Solutions</h6>
+          <h3 class="hny-title"><span class="color_prim">How Danish Travel's </span>Help Your Busniess</h3>
+          <img src="/media/assets/images/Screenshot from 2024-02-10 01-44-47.png" class="img-fluid  w-100" alt=""  />
+        </div>
       </div>
-      <div class="owl-testimonial owl-carousel owl-theme">
-        {% for i in licenses %}
-          <div class="item">
-            <div class="slider-info">
-              <div class="img-circle"></div>
-              <div class="message-info">
-                <span class="fa fa-quote-left mr-2"></span>
-                <div class="message">{{ i.text }}</div>
-                <div class="name">- {{ i.name }}</div>
-                <div class="desp">{{ i.designation }}</div>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+
     </div>
-    <!-- /main-slider -->
   </section>
+
+
+
+
+  <!--<section class="w3l-testimonials py-5" id="testimonials">-->
+    <!-- main-slider -->
+  <!--  <div class="container py-md-4 mb-md-0 mb-md-5 mb-4">-->
+  <!--    <div class="heading text-center mx-auto">-->
+  <!--      <h3 class="hny-title text-center mb-5">What Our Clients Say!</h3>-->
+  <!--    </div>-->
+  <!--    <div class="owl-testimonial owl-carousel owl-theme">-->
+  <!--      {% for i in licenses %}-->
+  <!--        <div class="item">-->
+  <!--          <div class="slider-info">-->
+  <!--            <div class="img-circle"></div>-->
+  <!--            <div class="message-info">-->
+  <!--              <span class="fa fa-quote-left mr-2"></span>-->
+  <!--              <div class="message">{{ i.text }}</div>-->
+  <!--              <div class="name">- {{ i.name }}</div>-->
+  <!--              <div class="desp">{{ i.designation }}</div>-->
+  <!--            </div>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      {% endfor %}-->
+  <!--    </div>-->
+  <!--  </div>-->
+    <!-- /main-slider -->
+  <!--</section>-->
 {% endblock %}

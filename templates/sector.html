@@ -53,7 +53,7 @@
 
 
 
-                <ul class="nav nav-pills nav-fill">
+                <ul class="nav nav-pills nav-fill" id="sector_w">
                   <li class="nav-item">
                     <a class="nav-link  sub-titlehny" href="{% url 'allSEC' %}"  style="font-weight: 600">All</a>
                   </li>
@@ -80,7 +80,7 @@
 
          <div class="row">
             {% for i in data %}
-            <div class="col-lg-3 col-6 team-wrap mt-sm-0 pt-sm-0 my-4 py-2">
+            <div class="col-lg-4 col-6 team-wrap mt-sm-0 pt-sm-0 my-4 py-2">
                <div class="team-info">
                   <div class="column position-relative img-circle">
                      <a href="{% url  'cont'%}"><img src="/media/{{ i.thumbnail }}" alt="" class="img-fluid card-img" /></a>

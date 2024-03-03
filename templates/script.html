@@ -3,43 +3,7 @@
    function googleTranslateElementInit() {  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-<!--<script>-->
-<!--    new Splide('.splide', {-->
-<!--       perPage: 4,-->
-
-<!--       pagination: false,-->
-
-<!--       breakpoints: {-->
-<!--          '640': {-->
-<!--             perPage: 2,-->
-<!--             gap: '1rem',-->
-<!--          },-->
-<!--          '480': {-->
-<!--             perPage: 1,-->
-<!--             gap: '1rem',-->
-<!--          },-->
-<!--       }-->
-<!--    }).mount();-->
-<!--</script>-->
-<script>
-   const checkbox = document.getElementById('checkbox');
-   checkbox.addEventListener('change', function() {
-       if ( checkbox.checked){
-             $("#site-header").addClass("bg-dark");
-             $("#site-header").removeClass("bg-white");
-       }
-       else{
-           $("#site-header").addClass("bg-white");
-           $("#site-header").removeClass("bg-dark");
-       }
-
-   });
-</script>
-<!-- Template JavaScript -->
 <script src="/media/assets/js/jquery-3.3.1.min.js"></script>
-<!-- script for testimonials -->
 <script>
    $(document).ready(function () {
       $('.owl-testimonial').owlCarousel({
@@ -72,13 +36,10 @@
       })
    })
 </script>
-<script src="/media/assets/js/theme-change.js"></script>
-<script src="/media/assets/js/lightbox-plus-jquery.min.js"></script>
-<script src="/media/assets/js/owl.carousel.js"></script>
 <script>
    $(document).ready(function () {
       $('.owl-one').owlCarousel({
-         loop: true,
+         loop: false,
          margin: 0,
          nav: false,
          responsiveClass: true,
@@ -113,15 +74,24 @@
    $('.counter').countUp();
 </script>
 <script>
+  $(document).ready(function() {
+    $('#sector_w .nav-link').hover(
+      function() {
+        $(this).addClass('active');
+      },
+      function() {
+        $(this).removeClass('active');
+      }
+    );
+  });
+</script>
+<script>
   $(document).ready(function(){
-    // Get the current URL path
     var path = window.location.pathname;
 
-    // Iterate over each nav-link and check if its href matches the current path
     $('.nav-link').each(function(){
       var href = $(this).attr('href');
       if (path === href) {
-        // Add the 'active' class to the matching nav-link
         $(this).addClass('active');
         $(this).removeClass('sub-titlehny');
 
@@ -146,20 +116,19 @@
           }
         });
 
-    //Main navigation Active Class Add Remove
-    $(".navbar-toggler").on("click", function () {
-      $("header").toggleClass("active");
-    });
-    $(document).on("ready", function () {
-      if ($(window).width() > 991) {
-        $("header").removeClass("active");
-      }
-      $(window).on("resize", function () {
-        if ($(window).width() > 991) {
-          $("header").removeClass("active");
-        }
-      });
-    });
+        $(".navbar-toggler").on("click", function () {
+          $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+          if ($(window).width() > 991) {
+            $("header").removeClass("active");
+          }
+          $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+              $("header").removeClass("active");
+            }
+          });
+        });
 
 
        $(".navbar-toggler").on("click", function () {
@@ -176,39 +145,30 @@
               });
            });
 
-// Get the current URL path
-  var currentPath = window.location.pathname;
+      var currentPath = window.location.pathname;
+      var navLinks = document.querySelectorAll('nav a');
 
-  // Get all the navigation links
-  var navLinks = document.querySelectorAll('nav a');
-
-  // Loop through each link and add the 'active' class if the href matches the current path
-  for (var i = 0; i < navLinks.length; i++) {
-    var link = navLinks[i];
-    if (link.getAttribute('href') === currentPath) {
-      link.classList.add('active');
-    }
-  }
+      for (var i = 0; i < navLinks.length; i++) {
+        var link = navLinks[i];
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.add('active');
+        }
+      }
 </script>
 
 <script>
  $(document).ready(function () {
-            // Show dropdown on hover
             $('.nav-item.dropdown').hover(function () {
                 $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
             }, function () {
                 $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
             });
 
-            // Handle click on the dropdown-toggle links
             $('.nav-link.dropdown-toggle').on('click', function (e) {
-                // Get the dynamically generated URL from the href attribute
                 var dynamicUrl = $(this).attr('href');
-
-                // If the URL is not empty, navigate to it
                 if (dynamicUrl && dynamicUrl !== "#") {
-                    e.preventDefault(); // Prevent the default behavior of the link
-                    window.location.href = dynamicUrl; // Navigate to the dynamically generated URL
+                    e.preventDefault();
+                    window.location.href = dynamicUrl;
                 }
             });
         });
@@ -228,48 +188,65 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
+ <script>
 
-<!--<script>-->
-<!--   var prevScrollpos = window.pageYOffset;-->
-<!--    window.onscroll = function() {-->
-<!--      var currentScrollPos = window.pageYOffset;-->
-<!--      if (prevScrollpos > currentScrollPos) {-->
-<!--        document.querySelector("#site-header").style.top = "0";-->
-<!--      } else {-->
-<!--        document.querySelector("#site-header").style.top = "0px";-->
-<!--      }-->
-<!--      prevScrollpos = currentScrollPos;-->
-<!--    }-->
-<!--       $(window).on("scroll", function () {-->
-<!--              var scroll = $(window).scrollTop();-->
+  $(document).ready(function() {
 
-<!--              if (scroll >= 80) {-->
-<!--                 $("#site-header").addClass("nav-fixed");-->
-<!--              } else {-->
-<!--                 $("#site-header").removeClass("nav-fixed");-->
-<!--              }-->
-<!--           });-->
 
-<!--           $(".navbar-toggler").on("click", function () {-->
-<!--              $("header").toggleClass("active");-->
-<!--           });-->
-<!--           $(document).on("ready", function () {-->
-<!--              if ($(window).width() > 991) {-->
-<!--                 $("header").removeClass("active");-->
-<!--              }-->
-<!--              $(window).on("resize", function () {-->
-<!--                 if ($(window).width() > 991) {-->
-<!--                    $("header").removeClass("active");-->
-<!--                 }-->
-<!--              });-->
-<!--           });-->
+      $('.owl-one').on('changed.owl.carousel', function(event) {
 
-<!--</script>-->
-<!--//MENU-JS-->
+         var currentSlide = event.item.index;
+         var $currentSlide = $('.owl-one .owl-item').eq(currentSlide);
+
+         $currentSlide.find('h5').removeClass('animate__animated');
+         $currentSlide.find('p').removeClass('animate__animated');
+         $currentSlide.find('h5').removeClass('animate__fadeInUp');
+         $currentSlide.find('p').removeClass('animate__fadeInRight');
+
+
+         $currentSlide.find('h5').addClass('animate__animated');
+         $currentSlide.find('p').addClass('animate__animated');
+         $currentSlide.find('h5').addClass('animate__fadeInUp');
+         $currentSlide.find('p').addClass('animate__fadeInRight');
+
+      });
+  });
+
+</script>
+<script>
+   const checkbox = document.getElementById('checkbox');
+   checkbox.addEventListener('change', function() {
+       if ( checkbox.checked){
+             $("#site-header").addClass("bg-dark");
+             $("#site-header").removeClass("bg-white");
+       }
+       else{
+           $("#site-header").addClass("bg-white");
+           $("#site-header").removeClass("bg-dark");
+       }
+
+   });
+
+  function changeBackground(element, backgroundUrl) {
+    let url = window.location.href+'media/'+backgroundUrl
+    console.log(url)
+
+    element.style.transition = 'background 0.3s ease-in';
+    element.style.background = "linear-gradient(#e82b5e9c, #e82b5e9c), url(" + url + ") center center no-repeat";
+    element.style.backgroundSize = 'cover';
+  }
+
+  function resetBackground(element) {
+    element.style.transition = ''; // Reset transition
+    element.style.background = ''; // Reset to default background
+  }
+
+
+
+</script>
+<script src="/media/assets/js/theme-change.js"></script>
+<script src="/media/assets/js/lightbox-plus-jquery.min.js"></script>
+<script src="/media/assets/js/owl.carousel.js"></script>
 <script src="/media/assets/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-   integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-   crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-   integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-   crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>

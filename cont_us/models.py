@@ -41,6 +41,7 @@ pre_save.connect(ContactUssignal, sender=ContactUs)
 class Service(models.Model):
     title = models.CharField(max_length=999)
     thumbnail = models.ImageField(upload_to="Service")
+    background = models.ImageField(upload_to="Service/bg")
     about = models.TextField(max_length=9999)
     Enable = models.BooleanField(default=True)
     index = models.BooleanField()

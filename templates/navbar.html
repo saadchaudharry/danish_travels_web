@@ -1,6 +1,6 @@
 {% load custom_filters %}
 
-<header id="site-header" class="fixed-top  ">
+<header id="site-header" class="fixed-top  fixed-top   nav-fixed ">
     <div class="container">
        <nav class="navbar navbar-expand-lg navbar-dark stroke">
 
@@ -9,7 +9,7 @@
             <h1>
                 <a class="navbar-brand" href="{% url 'index' %}" style="font-family: 'Toxigenesis';font-size:1.69rem">
 
-                    <img src="/media/assets/images/output-onlinepngtools (2).png" id='nav_img' alt="Navbar Image" class="img-fluid "  width="250" height="250"  >
+                    <img src="/media/assets/images/Pi7_Tool_8aQM2c.png" id='nav_img' alt="Navbar Image" class="img-fluid "  width="250" height="250"  >
 
                     <!--<img src="/media/assets/images/logo_3-removebg-preview.png" alt="Navbar Image" class="navbar-img img-fluid mr-2" width="45" height="35" >-->
                     <!--DanishTravels-->
@@ -46,17 +46,6 @@
                    </ul>
                 </li>
 
-                <li class="nav-item dropdown text-left">
-                    <a class="nav-link dropdown-toggle" href="{% url 'service' %}" role="button" data-toggle="dropdown" aria-expanded="false">
-                        Services
-                    </a>
-                    <ul class="dropdown-menu text-left" style="" >
-                        {% for service in custom_filters|services_list %}
-                            <li><a class="dropdown-item text-wrap" href="{% url 'ser_detail' slug=service.slug %}">{{ service.title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-
 
                 <li class="nav-item">
                    <a class="nav-link" href="{% url  'client'%}">Clients</a>
@@ -73,10 +62,21 @@
                       <li><a class="dropdown-item" href="{% url  'Empy'%}#Services">Employee</a></li>
                    </ul>
                 </li>
+                <li class="nav-item dropdown text-left">
+                    <a class="nav-link dropdown-toggle" href="{% url 'service' %}" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu text-left" style="" >
+                        {% for service in custom_filters|services_list %}
+                            <li><a class="dropdown-item text-wrap " href="{% url 'ser_detail' slug=service.slug %}">{{ service.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
 
                 <li class="nav-item">
                    <a class="nav-link" href="{% url  'process'%}">Process</a>
                 </li>
+
 
                 <li class="top-quote ml-lg-4 mt-lg-0 mt-3">
                    <a href="{% url  'cont'%}" class="btn btn-style btn-primary">Contact Us</a>

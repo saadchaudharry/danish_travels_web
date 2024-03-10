@@ -36,40 +36,18 @@
          <div class=" w3l-cwp4-sec m-0">
             <div class="container">
 
-               <!--<ul class="nav justify-content-center">-->
-               <!--   <li class="nav-item">-->
-               <!--     <a class="nav-link sub-titlehny"  href="{% url 'allSEC' %}">All</a>-->
-               <!--   </li>-->
-               <!--         {% for i in catag %}-->
-
-               <!--   <li class="nav-item">-->
-               <!--     <a class="nav-link sub-titlehny"  href="{% url 'cataSlug' i.slug %}">{{ i.title }}</a>-->
-               <!--   </li>-->
-               <!--         {% endfor %}-->
-
-               <!-- </ul>-->
-
-
-
-
-
                 <ul class="nav nav-pills nav-fill" id="sector_w">
                   <li class="nav-item">
-                    <a class="nav-link  sub-titlehny" href="{% url 'allSEC' %}"  style="font-weight: 600">All</a>
+                    <a class="nav-link  hny-title sector_nav " href="{% url 'allSEC' %}"  style="font-weight: 600;color: #c71f4c;text-decoration: none;">All</a>
                   </li>
                   {% for i in catag %}
                       <li class="nav-item">
-                        <a class="nav-link  sub-titlehny" href="{% url 'cataSlug' i.slug %}" style="font-weight: 600">{{ i.title }}</a>
+                        <a class="nav-link  hny-title sector_nav" href="{% url 'cataSlug' i.slug %}" style="font-weight: 600;color: #c71f4c;text-decoration: none;">{{ i.title }}</a>
                       </li>
                  {% endfor %}
 
 
                 </ul>
-
-
-
-
-
 
             </div>
          </div>

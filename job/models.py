@@ -12,7 +12,10 @@ from django.core.mail import send_mail
 
 class Carousel(models.Model):
     title = models.CharField(max_length=999)
-    heading2 = models.CharField(max_length=999)
+    title_1 = models.CharField(max_length=999)
+    title_2 = models.CharField(max_length=999)
+
+    heading2 = models.CharField(max_length=999,blank=True, null=True,)
     enable = models.BooleanField(default=False)
     position = models.IntegerField(blank=True, null=True, unique=True)
     text = models.TextField(max_length=9999, null=True, blank=True)

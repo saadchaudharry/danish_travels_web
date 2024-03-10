@@ -39,7 +39,7 @@
 <script>
    $(document).ready(function () {
       $('.owl-one').owlCarousel({
-         loop: false,
+         loop: true,
          margin: 0,
          nav: false,
          responsiveClass: true,
@@ -74,143 +74,155 @@
    $('.counter').countUp();
 </script>
 <script>
-  $(document).ready(function() {
-    $('#sector_w .nav-link').hover(
-      function() {
-        $(this).addClass('active');
-      },
-      function() {
-        $(this).removeClass('active');
+   $(document).ready(function() {
+     $('#sector_w .nav-link').hover(
+       function() {
+         $(this).addClass('active')
+
+      if ($(this).hasClass('sector_nav')) {
+        // Add CSS styling to set the color to white
+        $(this).css('color', 'white');
       }
-    );
-  });
-</script>
-<script>
-  $(document).ready(function(){
-    var path = window.location.pathname;
-
-    $('.nav-link').each(function(){
-      var href = $(this).attr('href');
-      if (path === href) {
-        $(this).addClass('active');
-        $(this).removeClass('sub-titlehny');
-
-      }
-    });
-  });
-</script>
-
-
-<script>
-        $(window).on("scroll", function () {
-          var scroll = $(window).scrollTop();
-
-          if (scroll >= 80) {
-            $("#site-header").addClass("nav-fixed");
-            $("#nav_img").attr('src', '/media/assets/images/Pi7_Tool_8aQM2c.png');
-
-          } else {
-            $("#site-header").removeClass("nav-fixed");
-            $("#nav_img").attr('src', '/media/assets/images/output-onlinepngtools (2).png');
-
+       },
+       function() {
+         $(this).removeClass('active');
+          if ($(this).hasClass('sector_nav')) {
+            // Add CSS styling to set the color to white
+            $(this).css('color', '#c71f4c');
           }
-        });
+       }
+     );
+   });
+</script>
+<script>
+   $(document).ready(function(){
+     var path = window.location.pathname;
 
-        $(".navbar-toggler").on("click", function () {
-          $("header").toggleClass("active");
-        });
-        $(document).on("ready", function () {
-          if ($(window).width() > 991) {
-            $("header").removeClass("active");
-          }
-          $(window).on("resize", function () {
-            if ($(window).width() > 991) {
-              $("header").removeClass("active");
-            }
-          });
-        });
+     $('.nav-link').each(function(){
+       var href = $(this).attr('href');
+       if (path === href) {
+         $(this).addClass('active');
+         $(this).removeClass('sub-titlehny');
 
-
-       $(".navbar-toggler").on("click", function () {
-              $("header").toggleClass("active");
-           });
-           $(document).on("ready", function () {
-              if ($(window).width() > 991) {
-                 $("header").removeClass("active");
-              }
-              $(window).on("resize", function () {
-                 if ($(window).width() > 991) {
-                    $("header").removeClass("active");
-                 }
-              });
-           });
-
-      var currentPath = window.location.pathname;
-      var navLinks = document.querySelectorAll('nav a');
-
-      for (var i = 0; i < navLinks.length; i++) {
-        var link = navLinks[i];
-        if (link.getAttribute('href') === currentPath) {
-          link.classList.add('active');
-        }
+      if ($(this).hasClass('sector_nav')) {
+        // Add CSS styling to set the color to white
+        $(this).css('color', 'white');
       }
-</script>
 
-<script>
- $(document).ready(function () {
-            $('.nav-item.dropdown').hover(function () {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-            }, function () {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-            });
 
-            $('.nav-link.dropdown-toggle').on('click', function (e) {
-                var dynamicUrl = $(this).attr('href');
-                if (dynamicUrl && dynamicUrl !== "#") {
-                    e.preventDefault();
-                    window.location.href = dynamicUrl;
-                }
-            });
-        });
+       }
+     });
+   });
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    var navItems = document.querySelectorAll(".navbar-nav li");
+   $(window).on("scroll", function () {
+     var scroll = $(window).scrollTop();
 
-    navItems.forEach(function (item) {
-        item.addEventListener("mouseenter", function () {
-            this.classList.add("active");
-        });
+   //   if (scroll >= 80) {
+       $("#site-header").addClass("nav-fixed");
+       $("#nav_img").attr('src', '/media/assets/images/Pi7_Tool_8aQM2c.png');
 
-        item.addEventListener("mouseleave", function () {
-            this.classList.remove("active");
-        });
-    });
-});
-</script>
- <script>
+   //   }
+   //   else {
+   //     $("#site-header").removeClass("nav-fixed");
+   //     $("#nav_img").attr('src', '/media/assets/images/output-onlinepngtools (2).png');
 
-  $(document).ready(function() {
+   //   }
+   });
+
+   $(".navbar-toggler").on("click", function () {
+     $("header").toggleClass("active");
+   });
+   $(document).on("ready", function () {
+     if ($(window).width() > 991) {
+       $("header").removeClass("active");
+     }
+     $(window).on("resize", function () {
+       if ($(window).width() > 991) {
+         $("header").removeClass("active");
+       }
+     });
+   });
 
 
-      $('.owl-one').on('changed.owl.carousel', function(event) {
-
-         var currentSlide = event.item.index;
-         var $currentSlide = $('.owl-one .owl-item').eq(currentSlide);
-
-         $currentSlide.find('h5').removeClass('animate__animated');
-         $currentSlide.find('p').removeClass('animate__animated');
-         $currentSlide.find('h5').removeClass('animate__fadeInUp');
-         $currentSlide.find('p').removeClass('animate__fadeInRight');
-
-
-         $currentSlide.find('h5').addClass('animate__animated');
-         $currentSlide.find('p').addClass('animate__animated');
-         $currentSlide.find('h5').addClass('animate__fadeInUp');
-         $currentSlide.find('p').addClass('animate__fadeInRight');
-
+   $(".navbar-toggler").on("click", function () {
+         $("header").toggleClass("active");
       });
-  });
+      $(document).on("ready", function () {
+         if ($(window).width() > 991) {
+            $("header").removeClass("active");
+         }
+         $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+               $("header").removeClass("active");
+            }
+         });
+      });
+
+   var currentPath = window.location.pathname;
+   var navLinks = document.querySelectorAll('nav a');
+
+   for (var i = 0; i < navLinks.length; i++) {
+   var link = navLinks[i];
+   if (link.getAttribute('href') === currentPath) {
+     link.classList.add('active');
+   }
+   }
+</script>
+<script>
+   $(document).ready(function () {
+              $('.nav-item.dropdown').hover(function () {
+                  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+              }, function () {
+                  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+              });
+
+              $('.nav-link.dropdown-toggle').on('click', function (e) {
+                  var dynamicUrl = $(this).attr('href');
+                  if (dynamicUrl && dynamicUrl !== "#") {
+                      e.preventDefault();
+                      window.location.href = dynamicUrl;
+                  }
+              });
+          });
+</script>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+       var navItems = document.querySelectorAll(".navbar-nav li");
+
+       navItems.forEach(function (item) {
+           item.addEventListener("mouseenter", function () {
+               this.classList.add("active");
+           });
+
+           item.addEventListener("mouseleave", function () {
+               this.classList.remove("active");
+           });
+       });
+   });
+</script>
+<script>
+   $(document).ready(function() {
+
+
+       $('.owl-one').on('changed.owl.carousel', function(event) {
+
+          var currentSlide = event.item.index;
+          var $currentSlide = $('.owl-one .owl-item').eq(currentSlide);
+
+          $currentSlide.find('h5').removeClass('animate__animated');
+          $currentSlide.find('p').removeClass('animate__animated');
+          $currentSlide.find('h5').removeClass('animate__fadeInUp');
+          $currentSlide.find('p').removeClass('animate__fadeInRight');
+
+
+          $currentSlide.find('h5').addClass('animate__animated');
+          $currentSlide.find('p').addClass('animate__animated');
+          $currentSlide.find('h5').addClass('animate__fadeInUp');
+          $currentSlide.find('p').addClass('animate__fadeInRight');
+
+       });
+   });
 
 </script>
 <script>
@@ -227,19 +239,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
    });
 
-  function changeBackground(element, backgroundUrl) {
+   function changeBackground(element, backgroundUrl,white_png) {
     let url = window.location.href+'media/'+backgroundUrl
-    console.log(url)
 
     element.style.transition = 'background 0.3s ease-in';
     element.style.background = "linear-gradient(#e82b5e9c, #e82b5e9c), url(" + url + ") center center no-repeat";
     element.style.backgroundSize = 'cover';
-  }
 
-  function resetBackground(element) {
-    element.style.transition = ''; // Reset transition
-    element.style.background = ''; // Reset to default background
-  }
+     let paragraphs = element.getElementsByTagName('p');
+      for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = 'black';
+      }
+
+     let image = element.getElementsByTagName('img');
+      for (let i = 0; i < image.length; i++) {
+        image[i].src = `/media/${white_png}`;
+      }
+
+   }
+
+   function resetBackground(element,orginal) {
+    element.style.transition = '';
+    element.style.background = '';
+
+     let image = element.getElementsByTagName('img');
+      for (let i = 0; i < image.length; i++) {
+        image[i].src = `/media/${orginal}`;
+      }
+
+   }
 
 
 

@@ -75,9 +75,9 @@ class Employer(models.Model):
 
 
 def Employer_signal(sender, instance, *args, **kwargs):
-    subject = 'ENQUIRE FROM WEBSITE Employer'
+    subject = 'Employer ENQUIRE FROM WEBSITE '
     message = f'''
-                Name         : {instance.first_name}
+                Name         : {instance.full_name}
                 Email        : {instance.email_address}
                 Phone        : {instance.phone_number}
                 company_name : {instance.company_name}
@@ -85,7 +85,7 @@ def Employer_signal(sender, instance, *args, **kwargs):
                 Message      : {instance.message}.
         '''
     email_from = settings.EMAIL_HOST_USER
-    recipient_list = ['saadchaudhary646@gmail.com', 'khalid@hr-asc.in ','Recruithr@hr-asc.in', 'Admin@hr-asc.in']
+    recipient_list = ['saadchaudhary646@gmail.com']
     send_mail(subject, message, email_from, recipient_list)
 
 
@@ -109,17 +109,16 @@ class Employee(models.Model):
 
 
 def Employee_signal(sender, instance, *args, **kwargs):
-    subject = 'ENQUIRE FROM WEBSITE Employee'
+    subject = 'Employee ENQUIRE FROM WEBSITE '
     message = f'''
                 Name : {instance.first_name}
-                Email : {instance.email}
+                Email : {instance.email_address}
                 Phone : {instance.phone_number}
                 Message :
                 {instance.message}.
         '''
     email_from = settings.EMAIL_HOST_USER
-    recipient_list = ['saadchaudhary646@gmail.com', 'khalid@hr-asc.in ',
-                      'Recruithr@hr-asc.in', 'Admin@hr-asc.in']
+    recipient_list = ['saadchaudhary646@gmail.com' ]
     send_mail(subject, message, email_from, recipient_list)
 
 

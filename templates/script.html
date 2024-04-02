@@ -177,7 +177,7 @@
                   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
               });
 
-              $('.nav-link.dropdown-toggle').on('click', function (e) {
+              $('#service_drop').on('click', function (e) {
                   var dynamicUrl = $(this).attr('href');
                   if (dynamicUrl && dynamicUrl !== "#") {
                       e.preventDefault();

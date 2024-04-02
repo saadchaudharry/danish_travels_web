@@ -68,7 +68,7 @@ ROOT_URLCONF = 'hrasc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/danishtravels/hrasc/templates'],
+        'DIRS': ['/home/saad/django/danish/danish_travels_web/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

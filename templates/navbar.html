@@ -42,7 +42,9 @@
                       <li><a class="dropdown-item" href="{% url  'allSEC'%}">Industries We Serve</a></li>
                       <li><a class="dropdown-item" href="{% url  'chairman'%}">Chairman's Message</a></li>
                       <li><a class="dropdown-item" href="{% url  'about'%}#PLACEMENT">Placement Solutions</a></li>
+                      <li><a class="dropdown-item" href="{% url 'licenses' %}">Licenses</a></li>
 
+                      
                    </ul>
                 </li>
 
@@ -62,8 +64,8 @@
                       <li><a class="dropdown-item" href="{% url  'Empy'%}#Services">Employee</a></li>
                    </ul>
                 </li>
-                <li class="nav-item dropdown text-left">
-                    <a class="nav-link dropdown-toggle" href="{% url 'service' %}" role="button" data-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown text-left" >
+                    <a class="nav-link dropdown-toggle" id="service_drop" href="{% url 'service' %}" role="button" data-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
                     <ul class="dropdown-menu text-left" style="" >

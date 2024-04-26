@@ -19,21 +19,22 @@
 
     <div class="container">
       <div class="row flex-center">
-        <div class="col-12 mb-2 mb-lg-5 text-center">
+        <div class="col-12 mb-1 mb-lg-1 text-center">
           <h6 class="sub-titlehny mb-2">Our Services</h6>
           <h3 class="hny-title">Our Tailored 360-degree Assistance.</h3>
         </div>
       </div>
 
         {% for s in Services %}
-      <div class="row align-items-center g-5 py-5">
+      <div class="row align-items-center g-5 py-4">
 
           <div class="col-lg-6 {% if forloop.counter|divisibleby:2 %}order-lg-1{% endif %}  text-center">
-            <img src="/media/{{ s.thumbnail }}" class="d-block mx-auto img-fluid" alt="Services image" width="200" height="200" loading="lazy">
+            <img src="/media/{{ s.background }}" class="d-block mx-lg-auto img-fluid" alt="Services image" width="500" height="500" loading="lazy">
           </div>
 
           <div class="col-lg-6 ">
             <h4 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 text-center">
+              <img src="/media/{{ s.thumbnail }}" class="d-block mx-auto img-fluid" alt="Services image" width="100" height="100" loading="lazy">
               <span class="t_title" style="color:#c18b8b">{{ forloop.counter }}</span> {{ s.title }}
             </h4>
             <p class="lead">{{ s.about }}</p>

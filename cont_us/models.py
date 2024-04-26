@@ -193,7 +193,17 @@ pre_save.connect(process_info_SLUG, sender=process_info)
 
 
 
+class side_bar(models.Model):
+    thumbnail = models.ImageField(upload_to="side_bar")
+    name = models.CharField(max_length=999)
+    url = models.CharField(max_length=999)
 
+    def __str__(self):
+        return str(self.name)
+
+    class Meta:
+        verbose_name = 'side_bar'
+        verbose_name_plural = 'side_bar'
 
 
 

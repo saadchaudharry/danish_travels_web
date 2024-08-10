@@ -1,0 +1,509 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+
+</style>
+  <!-- main-slider -->
+  <section class="w3l-main-slider" id="home">
+    <div class="companies20-content">
+      <div class="owl-one owl-carousel owl-theme" id="carouselExampleIndicators" >
+        {% for i in Carousel %}
+         <div class="item">
+           <li>
+              <div class="slider-info banner-view bg bg2" style="background: url(/media/{{ i.IMG }}) no-repeat center;background-size: cover;">
+                 <div class="banner-info">
+                    <div class="container  text-center">
+                       <div class="banner-info-bg">
+                          <h5 class="animate__animated animate__backInUp ">{{ i.title }}</h5>
+                          <h5 class="animate__animated animate__backInUp ">{{ i.title_1 }}</h5>
+                          <h5 class="animate__animated animate__backInUp ">{{ i.title_2 }}</h5>
+
+                          <!--<p class="mt-4 pr-lg-4 animate__animated animate__backInRight">{{ i.heading2 }}</p>-->
+                          <!--<a class="btn btn-style btn-secondary mt-sm-5 mt-4 mr-2" href="{{ i.link1 }}">{{ i.link_lable1 }}</a>-->
+                          {% if i.link_lable2 %}
+                             <!--<a class="btn btn-style btn-white mt-sm-5 mt-4" href="{{ i.link2 }}">{{ i.link_lable2 }}</a>-->
+                          {% endif %}
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </li>
+        </div>
+
+        {% endfor %}
+      </div>
+
+      <div class="arrow-downhny">
+        <a href="#main" class="arrow-down text-center position-absolute"><span class="arrow-down-icon"><span class="fa fa-arrow-down"></span></span></a>
+      </div>
+    </div>
+  </section>
+  <!-- /main-slider -->
+<br>
+
+  <section class="w3l-grids-3 py-2" id="about">
+    <div class="container py-md-3 pb-3">
+      <div class="row bottom-ab-grids align-items-center">
+        <div class="col-lg-6 bottom-ab-left">
+          <h6 class="sub-titlehny"> Our Company</h6>
+          <h3 class="hny-title">We have been successfully serving our esteemed clients for over 20 years</h3>
+          <p class="my-3">Since our inception, we have been at the forefront of connecting top talent with prestigious opportunities in the Gulf countries. With our head office strategically located in the bustling city of Mumbai, India, we have become a beacon of excellence in the recruitment industry.</p>
+        </div>
+        <div class="col-lg-6 bottom-ab-right mt-lg-0 mt-3 pl-lg-4">
+          <p>
+            <span class="color_prim">Our journey began in 1995</span> when we recognized a growing need for a professional and reliable recruitment partner for the Gulf region. Over the years, we have grown not only in experience but also in stature, building a strong network of clients and candidates that spans the Gulf Cooperation Council (GCC) nations.
+          </p>
+
+          <figure class="mt-3">
+            <blockquote class="blockquote">
+              <p>I am honored to welcome you to Danish Travels, a distinguished name in the world of recruitment with over a quarter-century of excellence. Our journey has been one of dedication. innovation. and unwavering commitment to our mission.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              <span class="color_prim">Danish Shaikh </span>
+              <cite title="Source Title">CEO</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+<!-- partial:index.partial.html -->
+<div class="box-container">
+	<div class="box-item">
+    <div class="flip-box">
+      <div class="flip-box-front text-center" style="background:linear-gradient(#0a0a0a87, #0a0a0a87), url('/media/Gallary/EXPERTISE.jpeg');">
+        <div class="inner ">
+          <img src="https://accesspar.com/Content/images/icons/icon-02.svg" alt="img" style="max-width: 80px; max-height: 80px;object-fit:fill;" >
+          <h3 class="flip-box-header  ">EXPERTISE</h3>
+          <!--<p>Indepth knowledge of various sectors and ability to fulfill the unique demands of our clients.</p>-->
+          <!--<img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">-->
+        </div>
+      </div>
+      <div class="flip-box-back text-center" style="background:linear-gradient(#0a0a0a87, #0a0a0a87),url('/media/Gallary/EXPERTISE.jpeg');">
+        <div class="inner">
+          <!--<h3 class="flip-box-header">EXPERTISE</h3>-->
+          <p>Indepth knowledge of various sectors and ability to fulfill the unique demands of our clients.</p>
+          <!--<button class="flip-box-button">Learn More</button>-->
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="box-item">
+    <div class="flip-box">
+      <div class="flip-box-front text-center" style="object-fit:fill;background:linear-gradient(#0a0a0a87, #0a0a0a87), url('/media/Gallary/AGILITY.jpeg');">
+        <div class="inner ">
+          <img src="https://accesspar.com/Content/images/icons/icon-08.svg" alt="img" style="max-width: 80px; max-height: 80px;object-fit:fill;" >
+
+          <h3 class="flip-box-header">AGILITY</h3>
+          <!--<p class="text-white">Being quick and responsive is ingrained in our culture. We understand your needs and get cracking.</p>-->
+          <!--<img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">-->
+        </div>
+      </div>
+      <div class="flip-box-back text-center" style="object-fit:fill;background:linear-gradient(#0a0a0a87, #0a0a0a87), url('/media/Gallary/AGILITY.jpeg');">
+        <div class="inner ">
+          <!--<h3 class="flip-box-header text-white">AGILITY</h3>-->
+          <p>Being quick and responsive is ingrained in our culture. We understand your needs and get cracking.</p>
+          <!--<button class="flip-box-button">Learn More</button>-->
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="box-item">
+    <div class="flip-box">
+      <div class="flip-box-front text-center filter-" style="background:linear-gradient(#0a0a0a87, #0a0a0a87), url('/media/Gallary/TRANSPARENCY.jpeg');">
+        <div class="inner ">
+          <img src="/media/Gallary/business-ethics_N1kHe8I.png" alt="img" style="max-width: 80px; max-height: 80px;object-fit:fill;" >
+
+          <h3 class="flip-box-header ">TRANSPARENCY</h3>
+          <!--<p>We focus and deliver realistic advice. We’re Straight-up, Honest, Realistic Guidance.</p>-->
+          <!--<img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">-->
+        </div>
+      </div>
+      <div class="flip-box-back text-center" style="object-fit:fill;background:linear-gradient(#0a0a0a87, #0a0a0a87),url('/media/Gallary/TRANSPARENCY.jpeg');">
+        <div class="inner  ">
+          <!--<h3 class="flip-box-header">TRANSPARENCY</h3>-->
+          <p>We focus and deliver realistic advice. We’re Straight-up, Honest, Realistic Guidance.</p>
+          <!--<button class="flip-box-button">Learn More</button>-->
+        </div>
+      </div>
+    </div>
+	</div>
+
+	<div class="box-item">
+    <div class="flip-box">
+      <div class="flip-box-front text-center filter-" style="object-fit:fill;background:linear-gradient(#0a0a0a87, #0a0a0a87), url('/media/Gallary/PARTNERSHIP.jpeg');">
+        <div class="inner  ">
+          <img src="/media/Gallary/collaboration.png" alt="img" style="max-width: 80px; max-height: 80px;object-fit:fill;" >
+
+          <h3 class="flip-box-header ">PARTNERSHIP</h3>
+          <!--<p>Our business is about understanding the needs of our clients/Customer and candidates.</p>-->
+          <!--<img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">-->
+        </div>
+      </div>
+      <div class="flip-box-back text-center" style="object-fit:fill;background:linear-gradient(#0a0a0a87, #0a0a0a87), url('/media/Gallary/PARTNERSHIP.jpeg');">
+        <div class="inner">
+          <!--<h3 class="flip-box-header">PARTNERSHIP</h3>-->
+          <p>Our business is about understanding the needs of our clients/Customer and candidates.</p>
+          <!--<button class="flip-box-button">Learn More</button>-->
+        </div>
+      </div>
+    </div>
+	</div>
+
+</div>
+<!-- partial -->
+
+
+
+
+
+
+
+
+
+    <!--  <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-3 py-5">-->
+
+    <!--  <div class="col" style="min-height:300px">-->
+    <!--    <div class="card card-cover  overflow-hidden text-bg-white rounded-4 shadow-lg" style="background-image: url('/media/Gallary/EXPERTISE.jpeg');">-->
+    <!--      <div class="d-flex flex-column h-100 p-3 pb-3 text-white text-shadow-1">-->
+    <!--        <h3 class=" mt-5 mb-4 lh-1 fw-bold text-white ">EXPERTISE</h3>-->
+    <!--          <p class="text-white">Indepth knowledge of various sectors and ability to fulfill the unique demands of our clients.</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+
+
+    <!--  <div class="col" style="min-height:300px">-->
+    <!--    <div class="card card-cover  overflow-hidden text-bg-white rounded-4 shadow-lg" style="background-image: url('/media/Gallary/AGILITY.jpeg');">-->
+    <!--      <div class="d-flex flex-column h-100 p-3 pb-3 text-white text-shadow-1">-->
+    <!--        <h3 class=" mt-5 mb-4  lh-1 fw-bold text-white ">AGILITY</h3>-->
+    <!--          <p class="text-white">Being quick and responsive is ingrained in our culture. We understand your needs and get cracking.</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+
+    <!--  <div class="col" style="min-height:300px">-->
+    <!--    <div class="card card-cover  overflow-hidden text-bg-white rounded-4 shadow-lg" style="background-image: url('https://as1.ftcdn.net/v2/jpg/06/06/62/28/1000_F_606622841_lxYWR8iZUMtQtbvJuCgAA4EicBrWweI7.jpg');">-->
+    <!--      <div class="d-flex flex-column h-100 p-3 pb-3 text-white text-shadow-1">-->
+    <!--        <h3 class=" mt-5 mb-4  lh-1 fw-bold text-white ">TRANSPARENCY</h3>-->
+    <!--          <p class="text-white">We focus and deliver realistic advice. We’re Straight-up, Honest, Realistic Guidance.</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+
+
+    <!--  <div class="col" style="min-height:300px">-->
+    <!--    <div class="card card-cover  overflow-hidden text-bg-white rounded-4 shadow-lg" style="background-image: url('/media/Gallary/PARTNERSHIP.jpeg');">-->
+    <!--      <div class="d-flex flex-column h-100 p-3 pb-3 text-white text-shadow-1">-->
+    <!--        <h3 class=" mt-5 mb-4  lh-1 fw-bold text-white ">PARTNERSHIP</h3>-->
+    <!--          <p class="text-white">Our business is about understanding the needs of our clients/Customer and candidates.</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+
+
+
+    <!--</div>-->
+
+    </div>
+  </section>
+
+
+  <div class="container-xxl py-5" id="main">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+          <div class="">
+            <h6 class="sub-titlehny"></h6>
+            <h3 class="hny-title">A Prime HR & Visa Processing Service Provider</h3>
+            <p class="my-3">
+              <!-- <span class="color_prim">Danish Travels</span> is one of the TOP 10 companies in India in the recruitment services sector. It is the first registered recruitment services firm with the Government of India in 1995. -->
+            </p>
+            <div class="d-flex align-items-center ">
+                <div class="flex-shrink-0 bg-primary p-4 rounded-5 rounded-bottom-0">
+                    <div class='circle' style="width: 100px; height: 100px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                     <h3 class="display-4 color_prim">20</h3>
+                    </div><br>
+                    <h5 class="text-white">Years of</h5>
+                    <h5 class="text-white">Experience</h5>
+                </div>
+
+
+              <div class="ms-4">
+                <p>
+                  <i class="fa fa-check color_prim me-2"></i> Oil &amp; Gas
+                </p>
+                <p>
+                  <i class="fa fa-check color_prim me-2"></i> Manufacturing
+                </p>
+                <p>
+                  <i class="fa fa-check color_prim me-2"></i> Civil H.R Solutions
+                </p>
+                <p>
+                  <i class="fa fa-check color_prim me-2"></i> MEP H.R Solutions
+                </p>
+                <p>
+                  <i class="fa fa-check color_prim me-2"></i> EPC
+                </p>
+                <p>
+                  <i class="fa fa-check color_prim me-2"></i> Plastic Industry
+                </p>
+                <p>
+                  <i class="fa fa-check color_prim me-2"></i> Marine Services
+                </p>
+              </div>
+            </div>
+            <div class="row pt-2">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary"></div>
+                  <div class="ms-3">
+                    <p class="mb-2">Email us</p>
+                    <h5 class="mb-0">info@Danishtravels.co</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary"></div>
+                  <div class="ms-3">
+                    <p class="mb-2">Call us</p>
+                    <h5 class="mb-0">+91-22-46055118</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+          <div class="position-relative me-lg-4">
+            <img class="img-fluid w-100" src="/media/Gallary/arab2.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /grids -->
+  <section class="w3l-services2 w3l-cwp4-sec" id="services">
+    <div id="cwp23-block" class="py-3">
+      <div class="container py-lg-5">
+        <div class="row cwp23-content mt-lg-5 mt-4">
+          <div class="col-lg-6 cwp23-img">
+            <h6 class="sub-titlehny">Our Services</h6>
+            <h3 class="hny-title">EFFICIENCY OF WORKFLOW</h3>
+            <p class="mt-4">
+              We welcome all the companies and organizations inside the
+              <span style="color:#c71f4c">Saudi Arabia | UAE | Kuwait | Bahrain | Oman | Qatar</span>
+              Middle East to offer our services
+            </p>
+            <p class="mt-4">Specially the recruitment, staffing We help our Clients the complete solutions on Human Resources which they all worried about their business. elit. Our intensive procedures and practices towards recruitment solutions helps in proficient recruiting process and improvising on talent quality delivery.</p>
+            <div class="w3l-button mt-lg-5 mt-4">
+              <a href="{% url  'service'%}" class="btn btn-style btn-secondary mr-2">Read More</a>
+            </div>
+          </div>
+          <div class="col-lg-6 cwp23-text align-self mt-lg-0 mt-5 pl-lg-5">
+            <div class="cwp23-text-cols">
+              <div class="column">
+                <span class="fa fa-trophy" aria-hidden="true"></span>
+                <a href="{% url  'service'%}">Identify the Best Talent</a>
+                <p>Effectively identify the best talent through objective and consistent selection processes.</p>
+              </div>
+              <div class="column">
+                <span class="fa fa-laptop" aria-hidden="true"></span>
+                <a href="{% url  'service'%}">Computerized Database</a>
+                <p>Ever increasing computerized database of CVs of skilled candidates from various industry domains.</p>
+              </div>
+              <div class="column">
+                <span class="fa fa-smile-o" aria-hidden="true"></span>
+                <a href="{% url  'service'%}">Competent Staff</a>
+                <p>Competent staff to support all the activities such as medical, trade tests, emigration, visa processing and instant reservations.</p>
+              </div>
+              <div class="column">
+                <span class="fa fa-users" aria-hidden="true"></span>
+                <a href="{% url  'service'%}">Excellent Network</a>
+                <p>Excellent network with GCC Consulate Embassies for speedy processing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- //grids -->
+  <!-- /w3l-faq-block -->
+  <!--<div class="w3l-cwp4-sec py-5">-->
+  <!--  <div class="container py-md-5 py-3">-->
+  <!--    <div class="cwp4-two row align-items-center">-->
+  <!--      <div class="cwp4-text col-lg-6">-->
+  <!--        <h6 class="sub-titlehny">OUR SERVICES!</h6>-->
+  <!--        <h3 class="hny-title">Best A Grade Commercial & Residential Services</h3>-->
+  <!--        <p>Factor that assure high performance and provide confidence to our global Clients on the reliablity of our services</p>-->
+  <!--        <ul class="cont-4 mt-lg-5 mt-4">-->
+  <!--          <li>-->
+  <!--            <span class="fa fa-check-circle-o"></span> Streamlined HR Processes for Optimal Client Satisfaction-->
+  <!--          </li>-->
+  <!--          <li>-->
+  <!--            <span class="fa fa-check-circle-o"></span> Collaborative Approach in Human Resource Management-->
+  <!--          </li>-->
+  <!--          <li>-->
+  <!--            <span class="fa fa-check-circle-o"></span> Continuous Training and Development Programs for our Team-->
+  <!--          </li>-->
+  <!--          <li>-->
+  <!--            <span class="fa fa-check-circle-o"></span> Transparent Communication Channels for Employee Engagement-->
+  <!--          </li>-->
+  <!--        </ul>-->
+  <!--      </div>-->
+  <!--      <div class="cwp4-image col-lg-6 pl-lg-5 mt-lg-0 mt-5">-->
+  <!--        <img src="/media/assets/images/work.jpg" class="img-fluid" alt="" />-->
+
+  <!--          <div class="buttons mt-5">-->
+  <!--              <a href="{% url  'process'%}" class="btn btn-style btn-secondary mr-2">View Process</a>-->
+  <!--          </div>-->
+
+
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</div>-->
+  <!-- //w3l-faq-block -->
+  <section class="w3l-grids-3 py-5">
+    <div class="container py-md-5 py-3">
+      <div class="row bottom-ab-grids align-items-center">
+        <div class="col-lg-12 bottom-ab-left">
+          <h6 class="sub-titlehny">Our Services</h6>
+          <h3 class="hny-title">Innovative H.R Solutions for Residences and Businesses</h3>
+          <p class="my-3">Danish Travels stands out with an innovative approach to delivering excellence in residential and commercial H.R Solutions. Our commitment to quality, precision, and client satisfaction sets the foundation for every project.</p>
+        </div>
+      </div>
+
+
+
+      <div class="row bottom_grids pt-md-3 text-left" id="Services">
+
+        {% for s in Services %}
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="grid-block text-center" onmouseover="changeBackground(this, '{{ s.background }}','{{ s.thumbnail_white }}')" onmouseout="resetBackground(this,'{{ s.thumbnail }}')" >
+              <a href="{% url 'ser_detail' slug=s.slug %}" class="d-block p-lg-4 p-3">
+                <img src="/media/{{ s.thumbnail }}" alt="Your Image" style="max-width: 64px; max-height: 64px;" />
+                <h4 class="my-3">{{ s.title }}</h4>
+                <p class="">{{ s.about|slice:":90" }} .....</p>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+
+
+          <div class="buttons mt-5 text-center">
+            <a href="{% url  'service'%}" class="btn btn-style btn-secondary mr-2">View Service</a>
+          </div>
+
+    </div>
+  </section>
+  <!-- //projects -->
+
+  <!-- stats -->
+  <section class="w3l-stats  py-lg-5 py-5" id="stats"
+  style=" background: linear-gradient(#c71f4c45,#c71f4c45),
+        url('/media/Gallary/arbic33.jpg') center center no-repeat;">
+    <div class="gallery-inner container py-md-5 py-3">
+      <div class="row stats-con">
+        <div class="col-lg-3 col-6 stats_info counter_grid">
+          <!--<span class="fa fa-laptop"></span>-->
+          <p class="counter color_text">20 +</p>
+          <h4 class="color_text">Years Of Experience In The Industry</h4>
+        </div>
+        <div class="col-lg-3 col-6 stats_info counter_grid">
+          <!--<span class="fa fa-users"></span>-->
+          <p class="counter color_text">200+</p>
+          <h4 class="color_text">Satisfied Clients We Served Globally</h4>
+        </div>
+        <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-5">
+          <!--<span class="fa fa-trophy"></span>-->
+          <p class="counter color_text">10000+</p>
+          <h4 class="color_text">Candidates Deployed</h4>
+        </div>
+        <div class="col-lg-3 col-6 stats_info counter_grid2 mt-lg-0 mt-5">
+          <!--<span class="fa fa-smile-o"></span>-->
+          <p class="counter color_text">60 +</p>
+          <h4 class="color_text">Industry We Served</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //stats -->
+
+  <!-- /w3l-faq-block -->
+  <div class="w3l-faq-block py-5" id="faq">
+    <div class="container py-lg-4">
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <div class="faq-image">
+            <img src="/media/Gallary/arab3.jpeg" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-6 mt-lg-0 mt-5 pl-lg-5">
+          <h6 class="sub-titlehny">FAQ</h6>
+          <h3 class="hny-title">Connecting Talent in India with Opportunities in the Middle East</h3>
+          <p class="my-3">
+            <span class="color_prim">Danish Travels</span> where we bridge the gap between talented professionals in India and exciting career opportunities in the Middle East. Our team of experts brings extensive experience to ensure a seamless match between clients and top-tier talent.
+          </p>
+          <section class="w3l-faq mt-5" id="faq">
+            <div class="faq-page">
+              <ul>
+                <li>
+                  <input type="checkbox" checked />
+                  <i></i>
+                  <h4>How do we connect clients and talent?</h4>
+                  <p>We specialize in identifying the right talent in India and connecting them with organizations in the Middle East. Our comprehensive approach ensures a perfect fit for both clients and candidates, fostering long-term success and growth.</p>
+                </li>
+                <li>
+                  <input type="checkbox" checked />
+                  <i></i>
+                  <h4>What makes us stand out?</h4>
+                  <p>Our commitment to excellence, cultural understanding, and a vast network in both the Middle East and India set us apart. We navigate the complexities of international recruitment, making the process smooth and efficient for our clients and candidates.</p>
+                </li>
+                <li>
+                  <input type="checkbox" checked />
+                  <i></i>
+                  <h4>Why choose our consultancy?</h4>
+                  <p>With a focus on integrity and reliability, our consultancy strives to exceed expectations. We denounce compromise and are dedicated to providing top-notch HR solutions that benefit both our clients in the Middle East and the talented professionals we represent in India.</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- //w3l-faq-block -->
+  <!-- /w3l-bottom -->
+  <section class="w3l-bottom py-5">
+    <div class="container py-md-4 py-3 text-center">
+      <div class="header-section text-center mx-auto">
+        <h3 class="hny-title">Empowering Your Future Through Strategic <br /><span class="color_prim">Danish Travels</span></h3>
+        <p class="my-3 px-lg-5">
+          <span class="color_prim">Danish Travels</span> , where we help build on your past experiences and prepare you for a thriving future. We understand that each professional journey is unique, and we tailor our strategic HR solutions to ensure your success.
+        </p>
+      </div>
+      <div class="buttons mt-5">
+        <a href="{% url  'about'%}" class="btn btn-style btn-secondary mr-2">Discover Our Approach</a>
+        <a href="{% url  'cont'%}" class="btn btn-style btn-secondary ml-2">Connect With Us</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

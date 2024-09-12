@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure-mzfvjy%!#(e(h_u50&u^jr1uhs#me_*7y(86a2rmb@d1qej+32
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['danishtravels.co']
+
+# CSRF ORIGINS
+CSRF_TRUSTED_ORIGINS = [
+    'http://danishtravels.co',
+]
 
 
 # Application definition
@@ -68,7 +73,7 @@ ROOT_URLCONF = 'hrasc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/saad/django/danish/danish_travels_web/templates'],
+        'DIRS': [ BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

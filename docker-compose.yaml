@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    container_name: danish_travels_web-app
+    ports:
+      - "8005:8000"
+    volumes:
+      - .:/app
+    environment:
+      DJANGO_SETTINGS_MODULE: hrasc.settings
+      PYTHONUNBUFFERED: 1
+    restart: always
